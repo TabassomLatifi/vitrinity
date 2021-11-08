@@ -16,6 +16,7 @@ body {
     font-family: 'iranSans';
     margin: 0;
     background-color: #F9F9F9;
+    font-size: 16px;
 }
 /*header section*/
 
@@ -29,14 +30,14 @@ body {
 }
 
 .logotype {
-    font-size: 30px;
+    font-size: 2rem;
     font-family: 'Architects Daughter';
-    padding: 20px 0px;
+    padding: 0.5rem 0;
 }
 .logo {
-    width: 40px;
-    height: 40px;
-    margin: 20px 207px 20px 25px;
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem 12rem 1rem 1.5rem;
     text-align: right;
 }
 
@@ -45,7 +46,7 @@ body {
 .home__banner {
     background-image: url('./Resources/images/background.png');
     background-size: cover;
-    height: 750px;
+    height: 50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,26 +55,26 @@ body {
 .home__title {
     color: #F0005E;
     text-align: center;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
-    margin-top: 70px;
-    margin-bottom: 30px;
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
 }
 
 .home__search {
     background-image: url('./Resources/SVGs/search.svg');
-    background-position: 25px 17px;
+    background-position: 1.5rem 1rem;
     background-repeat: no-repeat;
-    width: 993px;
-    height: 75px;
-    font-size: 24px;
+    width: 60rem;
+    height: 4.5rem;
+    font-size: 1.5rem;
     font-family: iranSans;
     text-align: right;
-    padding-right: 25px;
-    border-radius: 8px;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
     border: none;
     box-shadow: 0px 3px 6px rgba(0,0,0,16%);
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 ::placeholder {
     color: #D3D0CB;
@@ -83,12 +84,12 @@ body {
     display: inline-flex;
     flex-wrap: wrap;
     font-family: iranSans;
-    font-size: 28px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .home__text {
-    padding-right: 8px;
+    padding-right: 0.5rem;
 
 }
 
@@ -96,20 +97,18 @@ body {
 
 .home__categories {
     display: grid;
-    grid-template-columns: repeat(6, 170px);
-    grid-template-rows: 170px 170px;
-    grid-gap: 20px;
+    grid-template-columns: repeat(6, 10rem);
+    grid-template-rows: 10rem 10rem;
+    grid-gap: 1.25rem;
     justify-content: center;
-    margin-top: 70px;
-    margin-bottom: 200px;
+    margin-top: 4.375rem;
+    margin-bottom: 12.5rem;
 }
 
 .home__box {
-    /*width: 198px;
-    height: 198px;*/
     background-color: #E0E2DB;
-    border-radius: 4px;
-    font-size: 18px;
+    border-radius: 0.25rem;
+    font-size: 1rem;
     font-family: iranSans;
     font-weight: bold;
     text-align: center;
@@ -126,9 +125,9 @@ body {
 }
 
 .home__box img {
-    height: 80px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    height: 4.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 /*Footer Section*/
@@ -142,19 +141,19 @@ footer {
     z-index: 1;
 }
 .home__social {
-    padding-left: 30px;
+    padding-left: 2rem;
 }
 .home__social img {
-    height: 40px;
-    padding: 20px 30px 20px 0px;
+    height: 2rem;
+    padding: 1rem 1.5rem 1rem 0;
     cursor: pointer;
 }
 .home__nav {
-    font-size: 20px;
+    font-size: 1rem;
     font-family: iranSans;
     font-weight: bold;
 }
 .home__nav span {
-    padding-left: 30px;
+    padding-left: 1.5rem;
     float: right;
 }

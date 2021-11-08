@@ -1,0 +1,124 @@
+/*universal styles*/
+@font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/architectsdaughter/v11/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvTYlg4w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: iranSans;
+    src: url(./Resources/fonts/ttf/IRANSansWeb.ttf);
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'iranSans';
+    margin: 0;
+    background-color: #F9F9F9;
+
+}
+/*header section*/
+
+.products__header {
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0,0,0,16%);
+    position: relative;
+    z-index: 1;
+}
+
+.products__header img {
+    float: right;
+    padding: 32px 316px 32px 0px;
+    text-align: center;
+}
+.products__header span {
+    float: right;
+    font-size: 36px;
+    font-family: 'Architects Daughter';
+    padding: 30px 25px;
+    text-align: center;
+    color: #22223A;
+}
+
+.products__header .search__container {
+    float: left;
+
+}
+
+.products__header input[type=text] {
+    margin-top: 25px;
+    padding: 16px 25px;
+    font-size: 18px;
+    border: none;
+    height: 60px;
+    background-color: #F9F9F9;
+    border-radius: 0px 8px 8px 0px;
+    text-align: right;
+}
+
+.products__header .search__container button {
+    float: left;
+    padding: 15px;
+    margin-top: 25px;
+    margin-left: 316px;
+    background-color: #4F4E60;
+    font-size: 18px;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-image: url('./Resources/SVGs/loupe.svg');
+    background-position: 15px 15px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+::placeholder {
+    font-family: iranSans;
+    font-size: 18px;
+    color: #4F4E60;
+}
+
+/*main section*/
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 240px);
+    grid-gap: 30px;
+    padding-right: 291px;
+    padding-left: 291px;
+    margin-top: 100px;
+}
+
+.productimg {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    border: 8px;
+
+}
+
+.productimg img {
+    width: 720px;
+    border-radius: 4px;
+    outline: 3px solid white;
+}
+
+.productproperties {
+    grid-column: 4 / span 2;
+    grid-row: 1;
+    background-color: #ffffff;
+    width: 480px;
+    border-radius: 4px;
+    text-align: right;
+}
+
+.productproperties h1 {
+    padding-right: 20px;
+}
+.productproperties h5 {
+    padding-right: 20px;
+}
