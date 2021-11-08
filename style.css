@@ -21,7 +21,6 @@ body {
 
 .home__header {
     background-color: #ffffff;
-    height: 95px;
     box-shadow: 0px 3px 6px rgba(0,0,0,16%);
     display: flex;
     justify-content: flex-end;
@@ -30,14 +29,14 @@ body {
 }
 
 .logotype {
-    font-size: 36px;
+    font-size: 30px;
     font-family: 'Architects Daughter';
-    margin: 22px 0px 22px 0px;
+    padding: 20px 0px;
 }
 .logo {
-    width: 45px;
-    height: 45px;
-    margin: 25px 267px 25px 30px;
+    width: 40px;
+    height: 40px;
+    margin: 20px 207px 20px 25px;
     text-align: right;
 }
 
@@ -46,7 +45,7 @@ body {
 .home__banner {
     background-image: url('./Resources/images/background.png');
     background-size: cover;
-    height: 900px;
+    height: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,20 +96,20 @@ body {
 
 .home__categories {
     display: grid;
-    grid-template-columns: repeat(6, 198px);
-    grid-template-rows: 198px 198px;
-    grid-gap: 30px;
+    grid-template-columns: repeat(6, 170px);
+    grid-template-rows: 170px 170px;
+    grid-gap: 20px;
     justify-content: center;
     margin-top: 70px;
     margin-bottom: 200px;
 }
 
 .home__box {
-    width: 198px;
-    height: 198px;
+    /*width: 198px;
+    height: 198px;*/
     background-color: #E0E2DB;
     border-radius: 4px;
-    font-size: 24px;
+    font-size: 18px;
     font-family: iranSans;
     font-weight: bold;
     text-align: center;
@@ -135,7 +134,6 @@ body {
 /*Footer Section*/
 footer {
     background-color: #ffffff;
-    height: 105px;
     box-shadow: 0px -3px 6px rgba(0,0,0,16%);
     display: flex;
     align-items: center;
@@ -147,12 +145,12 @@ footer {
     padding-left: 30px;
 }
 .home__social img {
-    height: 45px;
-    padding-right: 30px;
+    height: 40px;
+    padding: 20px 30px 20px 0px;
     cursor: pointer;
 }
 .home__nav {
-    font-size: 24px;
+    font-size: 20px;
     font-family: iranSans;
     font-weight: bold;
 }
