@@ -16,7 +16,11 @@ body {
     font-family: 'iranSans';
     margin: 0;
     background-color: #F9F9F9;
+}
+
+html {
     font-size: 16px;
+
 }
 /*header section*/
 
@@ -27,17 +31,17 @@ body {
     justify-content: flex-end;
     position: relative;
     z-index: 1;
+    width: 100vw;
 }
 
 .logotype {
     font-size: 2rem;
     font-family: 'Architects Daughter';
-    padding: 0.5rem 0;
+    padding: 1vw 0;
 }
 .logo {
-    width: 2rem;
-    height: 2rem;
-    margin: 1rem 12rem 1rem 1.5rem;
+    width: 2%;
+    margin: 1vw 12vw 1vw 1vw;
     text-align: right;
 }
 
@@ -46,7 +50,8 @@ body {
 .home__banner {
     background-image: url('./Resources/images/background.png');
     background-size: cover;
-    height: 50rem;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,24 +62,24 @@ body {
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
-    margin-top: 4.5rem;
-    margin-bottom: 2rem;
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
 
 .home__search {
     background-image: url('./Resources/SVGs/search.svg');
-    background-position: 1.5rem 1rem;
+    background-position: 1vw 1vw;
     background-repeat: no-repeat;
-    width: 60rem;
-    height: 4.5rem;
+    width: 65%;
+    height: 10%;
     font-size: 1.5rem;
     font-family: iranSans;
     text-align: right;
-    padding-right: 1.5rem;
+    padding-right: 1vw;
     border-radius: 0.5rem;
     border: none;
     box-shadow: 0px 3px 6px rgba(0,0,0,16%);
-    margin-bottom: 2rem;
+    margin-bottom: 2%;
 }
 ::placeholder {
     color: #D3D0CB;
@@ -97,12 +102,12 @@ body {
 
 .home__categories {
     display: grid;
-    grid-template-columns: repeat(6, 10rem);
-    grid-template-rows: 10rem 10rem;
-    grid-gap: 1.25rem;
+    grid-template-columns: repeat(6, 10vw);
+    grid-template-rows: 10vw 10vw;
+    grid-gap: 1.25vw;
     justify-content: center;
-    margin-top: 4.375rem;
-    margin-bottom: 12.5rem;
+    margin-top: 5vw;
+    margin-bottom: 12.5vw;
 }
 
 .home__box {
@@ -125,9 +130,9 @@ body {
 }
 
 .home__box img {
-    height: 4.5rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+    height: 50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 /*Footer Section*/
@@ -141,11 +146,10 @@ footer {
     z-index: 1;
 }
 .home__social {
-    padding-left: 2rem;
+    padding-left: 3vw;
 }
 .home__social img {
-    height: 2rem;
-    padding: 1rem 1.5rem 1rem 0;
+    padding: 1vw 1vw 1vw 0;
     cursor: pointer;
 }
 .home__nav {
@@ -154,6 +158,6 @@ footer {
     font-weight: bold;
 }
 .home__nav span {
-    padding-left: 1.5rem;
+    padding-left: 3vw;
     float: right;
 }
