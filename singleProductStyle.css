@@ -126,6 +126,36 @@ main {
     box-shadow: 0px 3px 6px rgba(0,0,0,16%);
 
 }
+/*slider*/
+.slider {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: -2.5vw;
+}
+.circle {
+    background-color: #fff;
+    color:#fff;
+    display:inline-block;
+    border-radius:50%;
+    cursor: pointer;
+    height: 0.7vw;
+    width: 0.7vw;
+    padding: 0;
+}
+.transparent {
+    background-color: #fff;
+}
+.hover:hover{
+    background-color:#F0005E!important
+}
+.active {
+    background-color:#F0005E!important
+}
+.mySlides {
+    display: none;
+}
+/*purchase button*/
 
 .productbutton {
     grid-column: 1 / span 7;
@@ -136,8 +166,11 @@ main {
     border: none;
     font-size: 1.5rem;
     color: #ffffff;
-
-
+    margin-top: -1.5vw;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: #fff;
 }
 .producttitle h1 {
     font-size: 1.6rem;
@@ -147,7 +180,7 @@ main {
 }
 .producttitle aside {
     font-size: 0.8rem;
-    margin-right: 1.5625vw;
+    margin-right: 1.8625vw;
     
 }
 .producttitle button {
@@ -170,31 +203,118 @@ main {
 }
 /*product specification section*/
 
-.productspecifications {
-    width: 22.91vw;
-    background-color: #F9F9F9;
-    border-radius: 4px;
+.productspecifications .divtitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 4.3vw;
+    margin-left: 12.7vw;
     margin-top: 3.3vw;
-    margin-right: 1.5625vw;
-    margin-left: 1.5625vw;
+    padding: 0.5vw;
+    color: #4F4E60;
 }
 
-.productintroduction {
-    width: 22.91vw;
-    background-color: #F9F9F9;
+.productspecifications .underline {
+    border: 6px solid #F0005E;
     border-radius: 4px;
-    margin-top: 3.3vw;
-    margin-right: 1.5625vw;
-    margin-left: 1.5625vw;
+    margin-bottom: -1.5vw;
+    margin-right: 4.3vw;
+    margin-left: 12.7vw;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    z-index: -2;
 }
 
-.delivery {
+.productspecifications ul {
     width: 22.91vw;
     background-color: #F9F9F9;
     border-radius: 4px;
+    margin-left: 2.6075vw;
+    padding: 1.3vw;
+    list-style-type: none;
+    box-shadow: 0px 3px 6px rgba(0,0,0,16%);
+
+}
+
+.productspecifications li {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 0.5vw;
+    margin: 0.5vw;
+    width: 16vw;
+    box-shadow: 0px 1px 1px rgba(0,0,0,16%);
+
+}
+
+.productspecifications span {
+    float: right;
+    margin-top: 0.65vw;
+
+}
+/*product introduction section*/
+
+.productintroduction .divtitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 4.3vw;
+    margin-left: 12.7vw;
     margin-top: 3.3vw;
-    margin-right: 1.5625vw;
-    margin-left: 1.5625vw;
+    padding: 0.5vw;
+    color: #4F4E60;
+}
+
+.productintroduction .underline {
+    border: 6px solid #F0005E;
+    border-radius: 4px;
+    margin-bottom: -1.5vw;
+    margin-right: 4.3vw;
+    margin-left: 14.7vw;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    z-index: -2;
+}
+
+.productintroduction p {
+    width: 22.91vw;
+    background-color: #F9F9F9;
+    border-radius: 4px;
+    margin-left: 2.6075vw;
+    padding: 1.3vw;
+    box-shadow: 0px 3px 6px rgba(0,0,0,16%);
+
+}
+
+/*delivery section*/
+
+.delivery .divtitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 4.3vw;
+    margin-left: 10.7vw;
+    margin-top: 3.3vw;
+    padding: 0.5vw;
+    color: #4F4E60;
+}
+
+.delivery .underline {
+    border: 6px solid #F0005E;
+    border-radius: 4px;
+    margin-bottom: -1.5vw;
+    margin-right: 4.3vw;
+    margin-left: 15.9vw;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    z-index: -2;
+}
+
+.delivery ul {
+    width: 22.91vw;
+    background-color: #F9F9F9;
+    border-radius: 4px;
+    margin-left: 2.6075vw;
+    padding: 1.3vw;
+    list-style-type: none;
+    box-shadow: 0px 3px 6px rgba(0,0,0,16%);
+    margin-bottom: 2vw;
 }
 
 /*Footer Section*/
@@ -226,3 +346,5 @@ footer {
   .home__nav span {
     padding-left: 2vw;
   }
+
+  
