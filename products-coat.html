@@ -11,12 +11,12 @@
         <header class='products__header'>
             <div class='search__container'>
                 <form>
-                    <button type='submit'></button>
-                    <input type="text" placeholder="نام محصول یا فروشگاه" name='search'>
+                    <button onclick='searchFunction()' type='button'></button>
+                    <input type="text" onkeyup="searchFunction()" id='myInput' placeholder="نام محصول یا فروشگاه" name='search'>
                 </form>
             </div>
             <img src='./Resources/SVGs/logo.svg'/>
-            <span>Vitrinity</span>
+            <a href='./index.html'>Vitrinity</a>
         </header>
 
         <!--main section-->
@@ -32,91 +32,93 @@
                 <div class='sorting item'><strong>ترتیب نمایش</strong>
                     <span class='criterion'>جدیدترین</span>
                     <span class='criterion'>پربازدیدترین</span>
-                    <span class='criterion' onclick='ascendingSort()'>قیمت از کم به زیاد</span>
+                    <span class='criterion'>قیمت از کم به زیاد</span>
                     <span>قیمت از زیاد به کم</span>
                 </div>
                 <div class='filters item'>
                     <!--Applied Filter-->
                     <div id='allAppliedFilters'>
-                        <button data-filter='فقطموجود' class='فقطموجود appliedfilter'>فقط موجود</button>
-                        <button onclick='uncheck()' data-filter='الیافنخی' class='الیافنخی appliedfilter'>الیاف نخی</button>
-                        <button data-filter='کتان' class='کتان appliedfilter'>کتان</button>
-                        <button data-filter='لینن' class='لینن appliedfilter'>لینن</button>
-                        <button data-filter='ژاکارد' class='ژاکارد appliedfilter'>ژاکارد</button>
-                        <button data-filter='الیافطبیعی' class='الیافطبیعی appliedfilter'>الیاف طبیعی</button>
-                        <button data-filter='حریر' class='حریر appliedfilter'>حریر</button>
-                        <button data-filter='ریون' class='ریون appliedfilter'>ریون</button>
-                        <button data-filter='کرپ' class='کرپ appliedfilter'>کرپ</button>
-                        <button data-filter='ویسکوز' class='ویسکوز appliedfilter'>ویسکوز</button>
-                        <button data-filter='پلیاستر' class='پلیاستر appliedfilter'>پلی استر</button>
-                        <button data-filter='مشکی' class='مشکی appliedfilter'>مشکی</button>
-                        <button data-filter='سفید' class='سفید appliedfilter'>سفید</button>
-                        <button data-filter='آبی' class='آبی appliedfilter'>آبی</button>
-                        <button data-filter='سبز' class='سبز appliedfilter'>سبز</button>
-                        <button data-filter='صورتی'class='صورتی appliedfilter'>صورتی</button>
-                        <button data-filter='طوسی' class='طوسی appliedfilter'>طوسی</button>
-                        <button data-filter='زرد' class='زرد appliedfilter'>زرد</button>
-                        <button data-filter='سرمهای' class='سرمهای appliedfilter'>سرمه‌ای</button>
-                        <button data-filter='کرم' class='کرم appliedfilter'>کرم</button>
-                        <button data-filter='بنفش' class='بنفش appliedfilter'>بنفش</button>
-                        <button data-filter='قرمز' class='قرمز appliedfilter'>قرمز</button>
-                        <button data-filter='نارنجی' class='نارنجی appliedfilter'>نارنجی</button>
-                        <button data-filter='بژ' class='بژ appliedfilter'>بژ</button>
-                        <button data-filter='آجری' class='آجری appliedfilter'>آجری</button>
-                        <button data-filter='ارغوانی' class='ارغوانی appliedfilter'>ارغوانی</button>
-                        <button data-filter='یشمی' class='یشمی appliedfilter'>یشمی</button>
-                        <button data-filter='زرشکی' class='زرشکی appliedfilter'>زرشکی</button>
-                        <button data-filter='عنابی' class='عنابی appliedfilter'>عنابی</button>
-                        <button data-filter='قهوهای' class='قهوهای appliedfilter'>قهوه‌ای</button>
-                        <button data-filter='فیروزهای' class='فیروزهای appliedfilter'>فیروزه‌ای</button>
-                        <button data-filter='فریسایز' class='فریسایز appliedfilter'>فری‌سایز</button>
-                        <button data-filter='XS' class='XS appliedfilter'>XS</button>
-                        <button data-filter='S' class='S appliedfilter'>S</button>
-                        <button data-filter='M' class='M appliedfilter'>M</button>
-                        <button data-filter='L' class='L appliedfilter'>L</button>
-                        <button data-filter='XL' class='XL appliedfilter'>XL</button>
-                        <button data-filter='XXL' class='XXL appliedfilter'>XXL</button>
-                        <button data-filter='XXXL' class='XXXL appliedfilter'>XXXL</button>
-                        <button data-filter='34' class='34 appliedfilter'>34</button>
-                        <button data-filter='36' class='36 appliedfilter'>36</button>
-                        <button data-filter='38' class='38 appliedfilter'>38</button>
-                        <button data-filter='40' class='40 appliedfilter'>40</button>
-                        <button data-filter='42' class='42 appliedfilter'>42</button>
-                        <button data-filter='44' class='44 appliedfilter'>44</button>
-                        <button data-filter='46' class='46 appliedfilter'>46</button>
-                        <button data-filter='48' class='48 appliedfilter'>48</button>
-                        <button data-filter='50' class='50 appliedfilter'>50</button>
-                        <button data-filter='S-M' class='S-M appliedfilter'>S-M</button>
-                        <button data-filter='M-L' class='M-L appliedfilter'>M-L</button>
-                        <button data-filter='L-XL' class='L-XL appliedfilter'>L-XL</button>
-                        <button data-filter='XL-XXL' class='XL-XXL appliedfilter'>XL-XXL</button>
-                        <button data-filter='jeanwest' class='jeanwest appliedfilter'>Jean West</button>
-                        <button data-filter='lcwaikiki'class='lcwaikiki appliedfilter'>LC Waikiki</button>
-                        <button data-filter='koton'class='koton appliedfilter'>Koton</button>
-                        <button data-filter='jpa'class='jpa appliedfilter'>JPA</button>
-                        <button data-filter='celebon'class='celebon appliedfilter'>Celebon</button>
-                        <button data-filter='sarak'class='sarak appliedfilter'>Sarak</button>
-                        <button data-filter='zahana'class='zahana appliedfilter'>Zahana</button>
-                        <button data-filter='bodyspinner'class='bodyspinner appliedfilter'>Body Spinner</button>
-                        <button data-filter='salian'class='salian appliedfilter'>Salian</button>
-                        <button data-filter='jootijeans'class='jootijeans appliedfilter'>Jooti Jeans</button>
-                        <button data-filter='aroma'class='aroma appliedfilter'>Aroma</button>
-                        <button data-filter='lrc'class='lrc appliedfilter'>LRC</button>
-                        <button data-filter='ramcott'class='ramcott appliedfilter'>Ramcott</button>
-                        <button data-filter='ziboo'class='ziboo appliedfilter'>Ziboo</button>
-                        <button data-filter='only'class='only appliedfilter'>Only</button>
-                        <button data-filter='ovs'class='ovs appliedfilter'>OVS</button>
-                        <button data-filter='superdry'class='superdry appliedfilter'>Superdry</button>
-                        <button data-filter='newnil'class='newnil appliedfilter'>Newnil</button>
-                        <button data-filter='alfonsi'class='alfonsi appliedfilter'>Alfonsi</button>
-                        <button data-filter='rns'class='rns appliedfilter'>RNS</button>
-                        <button data-filter='مجلسی'class='مجلسی appliedfilter'>مجلسی</button>
-                        <button data-filter='روزمره'class='روزمره appliedfilter'>روزمره</button>
-                        <button data-filter='راحتی'class='راحتی appliedfilter'>راحتی</button>
-                        <button data-filter='اداری'class='اداری appliedfilter'>اداری</button>
-                        <button data-filter='دانشگاهی'class='دانشگاهی appliedfilter'>دانشگاهی</button>
-                        <button data-filter='مهمانی'class='مهمانی appliedfilter'>مهمانی</button>
-                        <button data-filter='قیمت'class='قیمت appliedfilter'></button>
+                        <button onclick='uncheck1()' id='فقطموجود' data-filter='فقطموجود' class='فقطموجود appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> فقط موجود</button>
+                        <button onclick='uncheck2()' id='الیافنخی' data-filter='الیافنخی' class='الیافنخی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> الیاف نخی</button>
+                        <button onclick='uncheck3()' id='کتان' data-filter='کتان' class='کتان appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> کتان</button>
+                        <button onclick='uncheck4()' id='لینن' data-filter='لینن' class='لینن appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> لینن</button>
+                        <button onclick='uncheck5()' id='ژاکارد' data-filter='ژاکارد' class='ژاکارد appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> ژاکارد</button>
+                        <button onclick='uncheck6()' id='الیافطبیعی' data-filter='الیافطبیعی' class='الیافطبیعی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> الیاف طبیعی</button>
+                        <button onclick='uncheck7()' id='حریر' data-filter='حریر' class='حریر appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> حریر</button>
+                        <button onclick='uncheck8()' id='ریون' data-filter='ریون' class='ریون appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> ریون</button>
+                        <button onclick='uncheck9()' id='کرپ' data-filter='کرپ' class='کرپ appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> کرپ</button>
+                        <button onclick='uncheck10()' id='ویسکوز' data-filter='ویسکوز' class='ویسکوز appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> ویسکوز</button>
+                        <button onclick='uncheck11()' id='پلیاستر' data-filter='پلیاستر' class='پلیاستر appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> پلی استر</button>
+                        <button onclick="uncheck12()" id='مشکی' data-filter='مشکی'  class='مشکی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> مشکی</button>
+                        <button onclick="uncheck13()" id='سفید' data-filter='سفید' class='سفید appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> سفید</button>
+                        <button onclick="uncheck14()" id='آبی' data-filter='آبی' class='آبی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> آبی</button>
+                        <button onclick="uncheck15()" id='سبز' data-filter='سبز' class='سبز appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> سبز</button>
+                        <button onclick="uncheck16()" id='صورتی'  data-filter='صورتی'class='صورتی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> صورتی</button>
+                        <button onclick="uncheck17()" id='طوسی'  data-filter='طوسی' class='طوسی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> طوسی</button>
+                        <button onclick="uncheck18()" id='زرد'  data-filter='زرد' class='زرد appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> زرد</button>
+                        <button onclick="uncheck19()" id='سرمهای'  data-filter='سرمهای' class='سرمهای appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> سرمه‌ای</button>
+                        <button onclick="uncheck20()" id='کرم'  data-filter='کرم' class='کرم appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> کرم</button>
+                        <button onclick="uncheck21()" id='بنفش'  data-filter='بنفش' class='بنفش appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> بنفش</button>
+                        <button onclick="uncheck22()" id='قرمز'  data-filter='قرمز' class='قرمز appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> قرمز</button>
+                        <button onclick="uncheck23()" id='نارنجی'  data-filter='نارنجی' class='نارنجی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> نارنجی</button>
+                        <button onclick="uncheck24()" id='بژ'  data-filter='بژ' class='بژ appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> بژ</button>
+                        <button onclick="uncheck25()" id='آجری'  data-filter='آجری' class='آجری appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> آجری</button>
+                        <button onclick="uncheck26()" id='ارغوانی'  data-filter='ارغوانی' class='ارغوانی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> ارغوانی</button>
+                        <button onclick="uncheck27()" id='یشمی'  data-filter='یشمی' class='یشمی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> یشمی</button>
+                        <button onclick="uncheck28()" id='زرشکی'  data-filter='زرشکی' class='زرشکی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> زرشکی</button>
+                        <button onclick="uncheck29()" id='عنابی'  data-filter='عنابی' class='عنابی appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> عنابی</button>
+                        <button onclick="uncheck30()" id='قهوهای'  data-filter='قهوهای' class='قهوهای appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> قهوه‌ای</button>
+                        <button onclick="uncheck31()" id='فیروزهای'  data-filter='فیروزهای' class='فیروزهای appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> فیروزه‌ای</button>
+                        <button onclick="uncheck32()" id='فریسایز'  data-filter='فریسایز' class='فریسایز appliedfilter'><img src='./Resources/SVGs/close-cross-pink.svg'> فری‌سایز</button>
+                        <button onclick="uncheck33()" id='XS' data-filter='XS' class='XS appliedfilter'>XS</button>
+                        <button onclick="uncheck34()" id='S' data-filter='S' class='S appliedfilter'>S</button>
+                        <button onclick="uncheck35()" id='M' data-filter='M' class='M appliedfilter'>M</button>
+                        <button onclick="uncheck36()" id='L' data-filter='L' class='L appliedfilter'>L</button>
+                        <button onclick="uncheck37()" id='XL' data-filter='XL' class='XL appliedfilter'>XL</button>
+                        <button onclick="uncheck38()" id='XXL' data-filter='XXL' class='XXL appliedfilter'>XXL</button>
+                        <button onclick="uncheck39()" id='XXXL' data-filter='XXXL' class='XXXL appliedfilter'>XXXL</button>
+                        <button onclick="uncheck40()" id='4XL' data-filter='4XL' class='4XL appliedfilter'>4XL</button>
+                        <button onclick="uncheck41()" id='34' data-filter='34' class='34 appliedfilter'>34</button>
+                        <button onclick="uncheck42()" id='36' data-filter='36' class='36 appliedfilter'>36</button>
+                        <button onclick="uncheck43()" id='38' data-filter='38' class='38 appliedfilter'>38</button>
+                        <button onclick="uncheck44()" id='40' data-filter='40' class='40 appliedfilter'>40</button>
+                        <button onclick="uncheck45()" id='42' data-filter='42' class='42 appliedfilter'>42</button>
+                        <button onclick="uncheck46()" id='44' data-filter='44' class='44 appliedfilter'>44</button>
+                        <button onclick="uncheck47()" id='46' data-filter='46' class='46 appliedfilter'>46</button>
+                        <button onclick="uncheck48()" id='48' data-filter='48' class='48 appliedfilter'>48</button>
+                        <button onclick="uncheck49()" id='50' data-filter='50' class='50 appliedfilter'>50</button>
+                        <button onclick="uncheck50()" id='S-M' data-filter='S-M' class='S-M appliedfilter'>S-M</button>
+                        <button onclick="uncheck51()" id='M-L' data-filter='M-L' class='M-L appliedfilter'>M-L</button>
+                        <button onclick="uncheck52()" id='L-XL' data-filter='L-XL' class='L-XL appliedfilter'>L-XL</button>
+                        <button onclick="uncheck53()" id='XL-XXL' data-filter='XL-XXL' class='XL-XXL appliedfilter'>XL-XXL</button>
+                        <button onclick="uncheck54()" id='jeanwest' data-filter='jeanwest' class='jeanwest appliedfilter'>Jean West</button>
+                        <button onclick="uncheck55()" id='lcwaikiki' data-filter='lcwaikiki'class='lcwaikiki appliedfilter'>LC Waikiki</button>
+                        <button onclick="uncheck56()" id='koton' data-filter='koton'class='koton appliedfilter'>Koton</button>
+                        <button onclick="uncheck57()" id='jpa' data-filter='jpa'class='jpa appliedfilter'>JPA</button>
+                        <button onclick="uncheck58()" id='celebon' data-filter='celebon'class='celebon appliedfilter'>Celebon</button>
+                        <button onclick="uncheck59()" id='sarak' data-filter='sarak'class='sarak appliedfilter'>Sarak</button>
+                        <button onclick="uncheck60()" id='zahana' data-filter='zahana'class='zahana appliedfilter'>Zahana</button>
+                        <button onclick="uncheck61()" id='bodyspinner' data-filter='bodyspinner'class='bodyspinner appliedfilter'>Body Spinner</button>
+                        <button onclick="uncheck62()" id='salian' data-filter='salian'class='salian appliedfilter'>Salian</button>
+                        <button onclick="uncheck63()" id='jootijeans' data-filter='jootijeans'class='jootijeans appliedfilter'>Jooti Jeans</button>
+                        <button onclick="uncheck64()" id='aroma' data-filter='aroma'class='aroma appliedfilter'>Aroma</button>
+                        <button onclick="uncheck65()" id='lrc' data-filter='lrc'class='lrc appliedfilter'>LRC</button>
+                        <button onclick="uncheck66()" id='ramcott' data-filter='ramcott'class='ramcott appliedfilter'>Ramcott</button>
+                        <button onclick="uncheck67()" id='jako' data-filter='jako'class='jako appliedfilter'>Jako</button>
+                        <button onclick="uncheck68()" id='ziboo' data-filter='ziboo'class='ziboo appliedfilter'>Ziboo</button>
+                        <button onclick="uncheck69()" id='only' data-filter='only'class='only appliedfilter'>Only</button>
+                        <button onclick="uncheck70()" id='ovs' data-filter='ovs'class='ovs appliedfilter'>OVS</button>
+                        <button onclick="uncheck71()" id='superdry' data-filter='superdry'class='superdry appliedfilter'>Superdry</button>
+                        <button onclick="uncheck72()" id='newnil' data-filter='newnil'class='newnil appliedfilter'>Newnil</button>
+                        <button onclick="uncheck73()" id='alfonsi' data-filter='alfonsi'class='alfonsi appliedfilter'>Alfonsi</button>
+                        <button onclick="uncheck74()" id='rns' data-filter='rns'class='rns appliedfilter'>RNS</button>
+                        <button onclick="uncheck75()" id='مجلسی' data-filter='مجلسی'class='مجلسی appliedfilter'>مجلسی</button>
+                        <button onclick="uncheck76()" id='روزمره' data-filter='روزمره'class='روزمره appliedfilter'>روزمره</button>
+                        <button onclick="uncheck77()" id='راحتی' data-filter='راحتی'class='راحتی appliedfilter'>راحتی</button>
+                        <button onclick="uncheck78()" id='اداری' data-filter='اداری'class='اداری appliedfilter'>اداری</button>
+                        <button onclick="uncheck79()" id='دانشگاهی' data-filter='دانشگاهی'class='دانشگاهی appliedfilter'>دانشگاهی</button>
+                        <button onclick="uncheck80()" id='مهمانی' data-filter='مهمانی'class='مهمانی appliedfilter'>مهمانی</button>
+                        <button onclick="uncheck81()" id='قیمت' data-filter='قیمت'class='قیمت appliedfilter'></button>
                     </div>
                     <form action="">
                         <div class='filters__available availableBtn'>
@@ -133,46 +135,46 @@
                             <img src="./Resources/SVGs/down.svg" alt="" id='textureDownIcon'>                          
                             <div class="texturesFilter" id='allTextures'>
                                 <div class=firstColumn>
-                                    <label class="container"><span class='text' id='myCheckboxTest'>الیاف نخی</span>
-                                        <input class='btn' data-filter='الیافنخی' type="checkbox">
+                                    <label class="container"><span class='text'>الیاف نخی</span>
+                                        <input class='btn' id='فیلترالیافنخی' data-filter='الیافنخی' type="checkbox">
                                         <span data-filter='الیافنخی' class="الیافنخی checkmark"></span>
                                     </label>
                                     <label class="container"><span class='text'>کتان</span>
-                                        <input class='btn' data-filter='کتان' type="checkbox">
+                                        <input class='btn' id='فیلترکتان' data-filter='کتان' type="checkbox">
                                         <span class="checkmark "></span>
                                     </label>
                                     <label class="container"><span class='text'>لینن</span>
-                                        <input class='btn' data-filter='لینن' type="checkbox">   
+                                        <input class='btn' id='فیلترلینن' data-filter='لینن' type="checkbox">   
                                         <span class="checkmark"></span>                             
                                     </label>
                                     <label class="container"><span class='text'>ژاکارد</span>
-                                        <input class='btn' data-filter='ژاکارد' type="checkbox">  
+                                        <input class='btn' id='فیلترژاکارد' data-filter='ژاکارد' type="checkbox">  
                                         <span class="checkmark"></span>                              
                                     </label>
                                     <label class="container"><span class='text'>الیاف طبیعی</span>
-                                        <input class='btn' data-filter='الیافطبیعی' type="checkbox"> 
+                                        <input class='btn' id='فیلترالیافطبیعی' data-filter='الیافطبیعی' type="checkbox"> 
                                         <span class="checkmark"></span>                               
                                     </label>
                                 </div>
                                 <div class='secondColumn'>
                                     <label class="container"><span class='text'>حریر</span>
-                                        <input class='btn' data-filter='حریر' type="checkbox">   
+                                        <input class='btn' id='فیلترحریر'data-filter='حریر' type="checkbox">   
                                         <span class="checkmark"></span>                             
                                     </label>
                                     <label class="container"><span class='text'>ریون</span>
-                                        <input class='btn' data-filter='ریون' type="checkbox">   
+                                        <input class='btn' id='فیلترریون' data-filter='ریون' type="checkbox">   
                                         <span class="checkmark"></span>                             
                                     </label>
                                     <label class="container"><span class='text'>کرپ</span>
-                                        <input class='btn' data-filter='کرپ' type="checkbox">   
+                                        <input class='btn' id='فیلترکرپ' data-filter='کرپ' type="checkbox">   
                                         <span class="checkmark"></span>                             
                                     </label>
                                     <label class="container"><span class='text'>ویسکوز</span>
-                                        <input class='btn' data-filter='ویسکوز' type="checkbox">  
+                                        <input class='btn' id='فیلترویسکوز' data-filter='ویسکوز' type="checkbox">  
                                         <span class="checkmark"></span>                              
                                     </label>
                                     <label class="container"><span class='text'>پلی استر</span>
-                                        <input class='btn' data-filter='پلیاستر' type="checkbox"> 
+                                        <input class='btn' id='فیلترپلیاستر' data-filter='پلیاستر' type="checkbox"> 
                                         <span class="checkmark"></span>                               
                                     </label>
                                 </div>
@@ -184,9 +186,9 @@
                             <img src="./Resources/SVGs/up.svg" alt="" id='colorUpIcon'>
                             <img src="./Resources/SVGs/down.svg" alt="" id='colorDownIcon'>      
                             <div class="colorsFilter" id='allColors'>
-                                <input class='colorBtn' data-filter='مشکی' type="checkbox" id="check_1" name="check_1" value="check_1" class='btn'>
+                                <input class='colorBtn' data-filter='مشکی' type="checkbox" id="check_1" name="check_1" value="check_1">
                                 <label for="check_1">مشکی<img src='./Resources/SVGs/black.svg'></label>
-                                <input class='colorBtn' data-filter='سفید' type="checkbox" id="check_2" name="check_2" value="check_2" class='btn'>
+                                <input class='colorBtn' data-filter='سفید' type="checkbox" id="check_2" name="check_2" value="check_2">
                                 <label for="check_2">سفید<img src='./Resources/SVGs/white.svg'></label>
                                 <input class='colorBtn' data-filter='آبی' type="checkbox" id="check_3" name="check_3" value="check_3">
                                 <label for="check_3">آبی<img src='./Resources/SVGs/blue.svg'></label>
@@ -229,7 +231,8 @@
                             </div>
                             <div class='more' id='moreColorsText'>
                                 <span id="colors">رنگ‌های بیشتر</span>
-                                <img src="./Resources/SVGs/down.svg" alt="">
+                                <img id='colorDownArrow' src="./Resources/SVGs/down.svg" alt="">
+                                <img id='colorUpArrow' src="./Resources/SVGs/up.svg" alt="">
                                 <br>
                             </div>
                         </div>
@@ -288,7 +291,8 @@
                             </div>
                             <div class='more' id='moreSizesText'>
                                 <span id='sizes'>سایزهای بیشتر</span>
-                                <img src="./Resources/SVGs/down.svg" alt="">
+                                <img id='sizeDownArrow' src="./Resources/SVGs/down.svg" alt="">
+                                <img id='sizeUpArrow' src="./Resources/SVGs/up.svg" alt="">
                             </div>
                         </div> 
                         <!--‌Brand Filter-->
@@ -316,7 +320,7 @@
                                 <input class='brandBtn' data-filter='salian' type="checkbox" id="check_51" name="check_51" value="check_51">
                                 <label for="check_51">Salian</label>
                                 <input class='brandBtn' data-filter='jootijeans' type="checkbox" id="check_52" name="check_52" value="check_52">
-                                <label for="check_52">Jooti jeans</label>
+                                <label for="check_52">Jooti Jeans</label>
                                 <input class='brandBtn' data-filter='aroma' type="checkbox" id="check_53" name="check_53" value="check_53">
                                 <label for="check_53">Aroma</label>
                                 <input class='brandBtn' data-filter='lrc' type="checkbox" id="check_54" name="check_54" value="check_54">
@@ -344,7 +348,8 @@
                             </div>
                             <div class='more' id='moreBrandsText'>
                                 <span id='brands'>برندهای بیشتر</span>                                
-                                <img src="./Resources/SVGs/down.svg" alt="">
+                                <img id='brandDownArrow' src="./Resources/SVGs/down.svg" alt="">
+                                <img id='brandUpArrow' src="./Resources/SVGs/up.svg" alt="">
                             </div>
                         </div>
                         <!--Price Filter-->
@@ -388,50 +393,49 @@
                     </form>
                 </div>
                 <div class='products' id='productList'>
-                    <div class='item store-product کرپ کرم S M L مهمانی jeanwest'>
+                    <div class='item store-product کرپ کرم S M L مهمانی مانتو jeanwest'>
                         <img src="./Resources/images/Photos/مانتو-و-ست-376x470.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price' id='price'>۷۶۰</span>
-                            <!--<span class='moreInfo'>مانتو کمربندی</span>-->
                         </div>
                     </div>
-                    <div class='item store-product قهوهای الیافطبیعی فریسایز دانشگاهی روزمره راحتی lcwaikiki'>
+                    <div class='item store-product قهوهای الیافطبیعی فریسایز دانشگاهی روزمره راحتی مانتو lcwaikiki'>
                         <img src="./Resources/images/Photos/مانتو-دانشگاهی-18.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۲۸۵</span>
                         </div>
                     </div>
-                    <div class='item store-product XS S M XL ریون طوسی دانشگاهی اداری روزمره راحتی koton'>
-                        <img src="./Resources/images/Photos/mezon.shik2021_225835131_1465848507124066_7532769748357418928_n.jpg" alt="">
+                    <div class='item store-product مانتو XS S M XL ریون طوسی دانشگاهی اداری روزمره راحتی koton'>
+                        <a href="./singleProduct.html"><img src="./Resources/images/Photos/mezon.shik2021_225835131_1465848507124066_7532769748357418928_n.jpg" alt=""></a>
                         <div class='pricebox'>
-                            <a class='currency' href="./singleProduct.html">هزار تومان</a>
-                            <a class='price' href="./singleProduct.html">۳۲۰</a>
+                            <span class='currency'>هزار تومان</span>
+                            <span class='price'>۳۲۰</span>
                         </div>
                     </div> 
-                    <div class='item store-product  مجلسی مهمانی فریسایز طوسی حریر jpa'>
+                    <div class='item store-product مانتو مجلسی مهمانی فریسایز طوسی حریر jpa'>
                         <img src="./Resources/images/Photos/chitra_storee_226490914_367220258321439_4067375843599846743_n.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۵۱۰</span>
                         </div>
                     </div>  
-                    <div class='item store-product 34 36 38 40 42 44 46 سفید الیافنخی مجلسی مهمانی celebon'>
+                    <div class='item store-product مانتو 34 36 38 40 42 44 46 سفید الیافنخی مجلسی مهمانی celebon'>
                         <img src="./Resources/images/Photos/annasani_226573516_912308269370329_7084111524770401884_n.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۳۷۰</span>
                         </div>
                     </div> 
-                    <div class='item store-product 34 36 38 40 42  اداری پلیاستر زرد مهمانی مجلسی sarak'>
+                    <div class='item store-product مانتو 34 36 38 40 42  اداری پلیاستر زرد مهمانی مجلسی sarak'>
                         <img src="./Resources/images/Photos/مدل-مانتو-32.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۵۴۰</span>
                         </div>
                     </div>
-                    <div class='item store-product S-M M-L L-XL XL-XXL سبز کتان دانشگاهی روزمره مهمانی ناموجود zahana'>  
+                    <div class='item store-product مانتو S-M M-L L-XL XL-XXL سبز کتان دانشگاهی روزمره مهمانی ناموجود zahana'>  
                         <img src="./Resources/images/Photos/mezon_kimya99_226354424_863505817616845_3190052227813251999_n.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
@@ -441,35 +445,35 @@
                             <img src="./Resources/SVGs/close-cross.svg" alt="">
                         </div>
                     </div>
-                    <div class='item store-product فریسایز حریر زرد مهمانی مجلسی jpa'>
+                    <div class='item store-product مانتو فریسایز حریر زرد مهمانی مجلسی jpa'>
                         <img src="./Resources/images/Photos/chitra_storee_227423962_122271700118873_8564908330990144213_n.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۵۱۰</span>
                         </div>
                     </div>  
-                    <div class='item store-product XS S M L XL XXL XXXL 4XL مشکی ژاکارد مجلسی مهمانی bodyspinner'>
+                    <div class='item store-product مانتو XS S M L XL XXL XXXL 4XL مشکی ژاکارد مجلسی مهمانی bodyspinner'>
                         <img src="./Resources/images/Photos/mezon_kimya99_227028916_103384435337756_4982831264791092134_n.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۶۶۰</span>
                         </div>
                     </div>
-                    <div class='item store-product 38 40 42 44 46 48 50 لینن سفید آبی روزمره دانشگاهی salian'>
+                    <div class='item store-product مانتو 38 40 42 44 46 48 50 لینن سفید آبی روزمره دانشگاهی salian'>
                         <img src="./Resources/images/Photos/mezon_kimya99_222628561_365572585071698_3771068500515983878_n.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۳۶۰</span>
                         </div>
                     </div> 
-                    <div class='item store-product 40 42 44 46 48 سبز الیافنخی روزمره jootijeans'>
+                    <div class='item store-product مانتو 40 42 44 46 48 سبز الیافنخی روزمره jootijeans'>
                         <img src="./Resources/images/Photos/green.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۴۳۰</span>
                         </div>
                     </div> 
-                    <div class='item store-product فریسایز الیافطبیعی نارنجی قهوهای مهمانی راحتی  ناموجود aroma'>
+                    <div class='item store-product مانتو فریسایز الیافطبیعی نارنجی قهوهای مهمانی راحتی  ناموجود aroma'>
                         <img src="./Resources/images/Photos/mezon_kimya99_224853201_549636739797389_74487098690611447_n.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
@@ -479,14 +483,14 @@
                             <img src="./Resources/SVGs/close-cross.svg" alt="">
                         </div>
                     </div>
-                    <div class='item store-product M L XL XXL XXXL 4XL مهمانی مجلسی مشکی ریون lrc'>
+                    <div class='item store-product مانتو M L XL XXL XXXL 4XL مهمانی مجلسی مشکی ریون lrc'>
                         <img src="./Resources/images/Photos/mezon_kimya99_221723750_3055682108090477_2917487467536758166_n (1).jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
                             <span class='price'>۹۰۰</span>
                         </div>
                     </div> 
-                    <div class='item store-product آبی سرمهای ویسکوز فریسایز راحتی روزمره ناموجود ramcott'>
+                    <div class='item store-product مانتو آبی سرمهای ویسکوز فریسایز راحتی روزمره ناموجود ramcott'>
                         <img src="./Resources/images/Photos/mezon_kimya99_218070270_360046168965087_3423598591698928299_n (1).jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
@@ -496,7 +500,7 @@
                             <img src="./Resources/SVGs/close-cross.svg" alt="">
                         </div>
                     </div> 
-                    <div class='item store-product 38 40 42 44 46  دانشگاهی مهمانی روزمره صورتی کتان jako'>
+                    <div class='item store-product مانتو 38 40 42 44 46  دانشگاهی مهمانی روزمره صورتی کتان jako'>
                         <img src="./Resources/images/Photos/mezon_kimya99_217512203_561952584818609_3030221227860510066_n.jpg" alt="">
                         <div class='pricebox'>
                             <span class='currency'>هزار تومان</span>
@@ -522,8 +526,5 @@
     </body>
 </html>
         
-<!--when the filters opens, their text should change to "less" and also the direction of arrow sign should become upside down-->
-<!--when user clicks on applied filters, the corresponding filter should be disabled-->
 <!--none of the sorting buttons work-->
-<!--search bar doesn't work-->
-<!--applied filters should be designed-->
+<!--pictures hover doesn't work-->

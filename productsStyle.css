@@ -43,12 +43,14 @@ html {
     width: 2%;
 
 }
-.products__header span {
+.products__header a {
     float: right;
     font-size: 32px;
     font-family: 'Architects Daughter';
     padding: 1vw 0;
     text-align: center;
+    color: #22223A;
+    text-decoration: none;
     color: #22223A;
 }
 
@@ -374,18 +376,20 @@ html {
     padding-left: 0;
   }
 
-  
   input[type="checkbox"]:checked + label {
     border: 1px solid #4F4E60;
     background-color: #E0E2DB;
   }  
-  .filtersTitle .more  {
+
+
+  .filtersTitle .more {
     text-align: center;
     font-size: 1rem;
     margin-top: 1vw;
     margin-bottom: 1vw;
     color: #4F4E60;
   }
+
   .filtersTitle .more img  {
     padding-left: 0.5vw!important;
   }
@@ -479,6 +483,31 @@ input[type='button'] {
     height: 50%;
     margin-top: 29%;
 }
+
+/*applied filters*/
+
+#allAppliedFilters {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1vw;
+  margin-right: 1vw;
+  justify-content: flex-end;
+}
+
+#allAppliedFilters button {
+  background-color: #F6EFF2;
+  border: 1px solid #F0005E;
+  border-radius: 10px;
+  color: #F0005E;
+  padding: 0.3vw;
+  height: 2.1vw;
+  margin: 0.3vw;
+}
+
+#allAppliedFilters button img {
+  padding: 0 0.3vw;
+}
+
 
 /*Footer Section*/
 footer {

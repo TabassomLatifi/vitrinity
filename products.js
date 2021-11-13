@@ -15,6 +15,7 @@ const hideTexture = () => {
     textureDownIcon.style.display = 'inline';
 
 }
+
 textureUpIcon.style.display = 'inline';
 textureDownIcon.style.display = 'none';
 let EventTarget4 = document.getElementById('textures');
@@ -36,6 +37,7 @@ EventTarget6.addEventListener('click', function() {
 });
 
 //colors section
+
 let color = document.getElementById('allColors');
 let colorUpIcon = document.getElementById('colorUpIcon');
 let colorDownIcon = document.getElementById('colorDownIcon');
@@ -53,8 +55,9 @@ const hideAllColors = () => {
     colorUpIcon.style.display = 'none';
     colorDownIcon.style.display = 'inline';
     moreColorsText.style.display = 'none';
-
 }
+
+
 colorUpIcon.style.display = 'inline';
 colorDownIcon.style.display = 'none';
 let EventTarget7 = document.getElementById('color');
@@ -74,20 +77,45 @@ EventTarget8.addEventListener('click', function() {
 EventTarget9.addEventListener('click', function() {
         showAllColors();
 });
+
 //more colors
 let moreColors = document.getElementById('moreColors');
+document.getElementById('colorUpArrow').style.display = 'none';
+document.getElementById('colorDownArrow').style.display = 'inline';
 const showColors = () => {
     moreColors.style.display = 'block';
+    document.getElementById('colors').innerHTML = 'کمتر';
+    document.getElementById('colorDownArrow').style.display = 'none';
+    document.getElementById('colorUpArrow').style.display = 'inline';
 }
 
 const hideColors = () => {
     moreColors.style.display = 'none';
+    document.getElementById('colors').innerHTML = 'رنگ‌های بیشتر';
+    document.getElementById('colorUpArrow').style.display = 'none';
+    document.getElementById('colorDownArrow').style.display = 'inline';
 }
 
 let eventTarget1 = document.getElementById('colors');
 moreColors.style.display = 'none';
 
 eventTarget1.addEventListener('click', function() {
+    if (moreColors.style.display === 'block') {
+        hideColors();
+    } else {
+        showColors();
+    }
+});
+let eventTarget22 = document.getElementById('colorDownArrow');
+eventTarget22.addEventListener('click', function() {
+    if (moreColors.style.display === 'block') {
+        hideColors();
+    } else {
+        showColors();
+    }
+});
+let eventTarget23 = document.getElementById('colorUpArrow');
+eventTarget23.addEventListener('click', function() {
     if (moreColors.style.display === 'block') {
         hideColors();
     } else {
@@ -137,17 +165,41 @@ EventTarget12.addEventListener('click', function() {
 
 //more sizes
 let moreSizes = document.getElementById('moreSizes')
+document.getElementById('sizeUpArrow').style.display = 'none';
+document.getElementById('sizeDownArrow').style.display = 'inline';
 const showSizes = () => {
     moreSizes.style.display = 'block';
+    document.getElementById('sizes').innerHTML = 'کمتر';
+    document.getElementById('sizeDownArrow').style.display = 'none';
+    document.getElementById('sizeUpArrow').style.display = 'inline';
 }
 
 const hideSizes = () => {
     moreSizes.style.display = 'none';
+    document.getElementById('sizes').innerHTML = 'سایزهای بیشتر';
+    document.getElementById('sizeUpArrow').style.display = 'none';
+    document.getElementById('sizeDownArrow').style.display = 'inline';
 }
 let eventTarget2 = document.getElementById('sizes');
 moreSizes.style.display = 'none';
 
 eventTarget2.addEventListener('click', function() {
+    if (moreSizes.style.display === 'block') {
+        hideSizes();
+    } else {
+        showSizes();
+    }
+});
+let eventTarget24 = document.getElementById('sizeDownArrow');
+eventTarget24.addEventListener('click', function() {
+    if (moreSizes.style.display === 'block') {
+        hideSizes();
+    } else {
+        showSizes();
+    }
+});
+let eventTarget25 = document.getElementById('sizeUpArrow');
+eventTarget25.addEventListener('click', function() {
     if (moreSizes.style.display === 'block') {
         hideSizes();
     } else {
@@ -193,14 +245,26 @@ EventTarget14.addEventListener('click', function() {
 EventTarget15.addEventListener('click', function() {
         showAllBrands();
 });
+
+
+
 //more brands
-let moreBrands = document.getElementById('moreBrands')
+let moreBrands = document.getElementById('moreBrands');
+document.getElementById('brandUpArrow').style.display = 'none';
+document.getElementById('brandDownArrow').style.display = 'inline';
+
 const showBrands = () => {
     moreBrands.style.display = 'block';
+    document.getElementById('brands').innerHTML = 'کمتر';
+    document.getElementById('brandDownArrow').style.display = 'none';
+    document.getElementById('brandUpArrow').style.display = 'inline';
 }
 
 const hideBrands = () => {
     moreBrands.style.display = 'none';
+    document.getElementById('brands').innerHTML = 'برندهای بیشتر';
+    document.getElementById('brandUpArrow').style.display = 'none';
+    document.getElementById('brandDownArrow').style.display = 'inline';
 }
 let eventTarget3 = document.getElementById('brands');
 moreBrands.style.display = 'none';
@@ -212,6 +276,24 @@ eventTarget3.addEventListener('click', function() {
         showBrands();
     }
 });
+let eventTarget26 = document.getElementById('brandDownArrow');
+eventTarget26.addEventListener('click', function() {
+    if (moreBrands.style.display === 'block') {
+        hideBrands();
+    } else {
+        showBrands();
+    }
+});
+
+let eventTarget27 = document.getElementById('brandUpArrow');
+eventTarget27.addEventListener('click', function() {
+    if (moreBrands.style.display === 'block') {
+        hideBrands();
+    } else {
+        showBrands();
+    }
+});
+
 
 //prices section
 let price = document.getElementById('allPrices');
@@ -250,6 +332,7 @@ EventTarget18.addEventListener('click', function() {
         showAllPrices();
 });
 
+
 //usabilities section
 let usability = document.getElementById('allUsabilityCases');
 let usabilityUpIcon = document.getElementById('usabilityUpIcon');
@@ -287,6 +370,7 @@ EventTarget21.addEventListener('click', function() {
         showAllUsabilityCases();
 });
 
+
 //Submit filters
 const availableBtn = document.getElementById('availableBtn');
 const btns = document.querySelectorAll('.btn');
@@ -310,7 +394,12 @@ let priceUpRange = 5000000;
 let productPrice = 0;
 
 function changePriceDownRange() {
-    priceDownRange = document.getElementById('priceDownRange').value;
+    
+    if (document.getElementById('priceDownRange').value.length === 0) {
+        priceDownRange = 0;
+    } else {
+        priceDownRange = document.getElementById('priceDownRange').value;
+    }
     console.log(priceDownRange);
     appliedFilters.forEach((appliedfilter) => {
         if (appliedfilter.classList.contains('قیمت')) {
@@ -320,7 +409,12 @@ function changePriceDownRange() {
     });
 }
 function changePriceUpRange() {
-    priceUpRange = document.getElementById('priceUpRange').value;
+    
+    if (document.getElementById('priceUpRange').value.length === 0) {
+        priceUpRange = 5000000;
+    } else {
+        priceUpRange = document.getElementById('priceUpRange').value;
+    }
     console.log(priceUpRange);
     appliedFilters.forEach((appliedfilter) => {
         if (appliedfilter.classList.contains('قیمت')) {
@@ -329,6 +423,9 @@ function changePriceUpRange() {
         }                
     });
 }
+
+
+
 
 appliedFilters.forEach((appliedfilter) => {
     appliedfilter.style.display = 'none';
@@ -355,6 +452,8 @@ function toggleFilter() {
 availableBtn.addEventListener('click', toggleFilter);
 
 //remove applied filters
+
+/*
 for (let g = 0; g < appliedFilters.length; g++) {
     appliedFilters[g].addEventListener('click', (e) => {
         if (allAppliedFilter.includes(e.target.dataset.filter)) {
@@ -371,21 +470,664 @@ for (let g = 0; g < appliedFilters.length; g++) {
                 for(let h=0; h < allAppliedFilter.length; h++) {
                     if (appliedfilter.classList.contains(allAppliedFilter[h])) {
                         appliedfilter.style.display = 'none';
-                        /*btns.forEach((btn) => {
-                            if (btn.classList.contains(allAppliedFilter[h])) {
-                                btn.checked = false;
-                            }
-                        })*/  
-                                             
+                        }
                     }
                 }
             })
         }
     });
 }
-function uncheck() {
-    document.getElementById('myCheckboxTest').Checked = false;
-} 
+*/
+//applied filters functions (onclick)
+function uncheck1() {
+    document.getElementById('فقطموجود').style.display = 'none';
+    document.getElementById('availableBtn').checked = false;
+    availableFilter = 0;
+}; 
+function uncheck2() {
+    document.getElementById('الیافنخی').style.display = 'none';
+    document.getElementById('فیلترالیافنخی').checked = false;
+    if (filter.includes('الیافنخی')) {
+        const index = filter.indexOf('الیافنخی');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck3() {
+    document.getElementById('کتان').style.display = 'none';
+    document.getElementById('فیلترکتان').checked = false;
+    if (filter.includes('کتان')) {
+        const index = filter.indexOf('کتان');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck4() {
+    document.getElementById('لینن').style.display = 'none';
+    document.getElementById('فیلترلینن').checked = false;
+    if (filter.includes('لینن')) {
+        const index = filter.indexOf('لینن');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck5() {
+    document.getElementById('ژاکارد').style.display = 'none';
+    document.getElementById('فیلترژاکارد').checked = false;
+    if (filter.includes('ژاکارد')) {
+        const index = filter.indexOf('ژاکارد');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck6() {
+    document.getElementById('الیافطبیعی').style.display = 'none';
+    document.getElementById('فیلترالیافطبیعی').checked = false;
+    if (filter.includes('الیافطبیعی')) {
+        const index = filter.indexOf('الیافطبیعی');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck7() {
+    document.getElementById('حریر').style.display = 'none';
+    document.getElementById('فیلترحریر').checked = false;
+    if (filter.includes('حریر')) {
+        const index = filter.indexOf('حریر');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck8() {
+    document.getElementById('ریون').style.display = 'none';
+    document.getElementById('فیلترریون').checked = false;
+    if (filter.includes('ریون')) {
+        const index = filter.indexOf('ریون');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck9() {
+    document.getElementById('کرپ').style.display = 'none';
+    document.getElementById('فیلترکرپ').checked = false;
+    if (filter.includes('کرپ')) {
+        const index = filter.indexOf('کرپ');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck10() {
+    document.getElementById('ویسکوز').style.display = 'none';
+    document.getElementById('فیلترویسکوز').checked = false;
+    if (filter.includes('ویسکوز')) {
+        const index = filter.indexOf('ویسکوز');
+        filter.splice(index, 1);
+    }
+}; 
+function uncheck11() {
+    document.getElementById('پلیاستر').style.display = 'none';
+    document.getElementById('فیلترپلیاستر').checked = false;
+    if (filter.includes('پلیاستر')) {
+        const index = filter.indexOf('پلیاستر');
+        filter.splice(index, 1);
+    }
+}; 
+
+function uncheck12() {
+    document.getElementById('مشکی').style.display = 'none';
+    document.getElementById('check_1').checked = false;
+    if (colorFilter.includes('مشکی')) {
+        const index = colorFilter.indexOf('مشکی');
+        colorFilter.splice(index, 1);
+    }
+}; 
+function uncheck13() {
+    document.getElementById('سفید').style.display = 'none';
+    document.getElementById('check_2').checked = false;
+    if (colorFilter.includes('سفید')) {
+        const index = colorFilter.indexOf('سفید');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck14() {
+    document.getElementById('آبی').style.display = 'none';
+    document.getElementById('check_3').checked = false;
+    if (colorFilter.includes('آبی')) {
+        const index = colorFilter.indexOf('آبی');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck15() {
+    document.getElementById('سبز').style.display = 'none';
+    document.getElementById('check_4').checked = false;
+    if (colorFilter.includes('سبز')) {
+        const index = colorFilter.indexOf('سبز');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck16() {
+    document.getElementById('صورتی').style.display = 'none';
+    document.getElementById('check_5').checked = false;
+    if (colorFilter.includes('صورتی')) {
+        const index = colorFilter.indexOf('صورتی');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck17() {
+    document.getElementById('طوسی').style.display = 'none';
+    document.getElementById('check_6').checked = false;
+    if (colorFilter.includes('طوسی')) {
+        const index = colorFilter.indexOf('طوسی');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck18() {
+    document.getElementById('زرد').style.display = 'none';
+    document.getElementById('check_7').checked = false;
+    if (colorFilter.includes('زرد')) {
+        const index = colorFilter.indexOf('زرد');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck19() {
+    document.getElementById('سرمهای').style.display = 'none';
+    document.getElementById('check_8').checked = false;
+    if (colorFilter.includes('سرمهای')) {
+        const index = colorFilter.indexOf('سرمهای');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck20() {
+    document.getElementById('کرم').style.display = 'none';
+    document.getElementById('check_9').checked = false;
+    if (colorFilter.includes('کرم')) {
+        const index = colorFilter.indexOf('کرم');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck21() {
+    document.getElementById('بنفش').style.display = 'none';
+    document.getElementById('check_10').checked = false;
+    if (colorFilter.includes('بنفش')) {
+        const index = colorFilter.indexOf('بنفش');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck22() {
+    document.getElementById('قرمز').style.display = 'none';
+    document.getElementById('check_11').checked = false;
+    if (colorFilter.includes('قرمز')) {
+        const index = colorFilter.indexOf('قرمز');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck23() {
+    document.getElementById('نارنجی').style.display = 'none';
+    document.getElementById('check_12').checked = false;
+    if (colorFilter.includes('نارنجی')) {
+        const index = colorFilter.indexOf('نارنجی');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck24() {
+    document.getElementById('بژ').style.display = 'none';
+    document.getElementById('check_13').checked = false;
+    if (colorFilter.includes('بژ')) {
+        const index = colorFilter.indexOf('بژ');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck25() {
+    document.getElementById('آجری').style.display = 'none';
+    document.getElementById('check_14').checked = false;
+    if (colorFilter.includes('آجری')) {
+        const index = colorFilter.indexOf('آجری');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck26() {
+    document.getElementById('ارغوانی').style.display = 'none';
+    document.getElementById('check_15').checked = false;
+    if (colorFilter.includes('ارغوانی')) {
+        const index = colorFilter.indexOf('ارغوانی');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck27() {
+    document.getElementById('یشمی').style.display = 'none';
+    document.getElementById('check_16').checked = false;
+    if (colorFilter.includes('یشمی')) {
+        const index = colorFilter.indexOf('یشمی');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck28() {
+    document.getElementById('زرشکی').style.display = 'none';
+    document.getElementById('check_17').checked = false;
+    if (colorFilter.includes('زرشکی')) {
+        const index = colorFilter.indexOf('زرشکی');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck29() {
+    document.getElementById('عنابی').style.display = 'none';
+    document.getElementById('check_18').checked = false;
+    if (colorFilter.includes('عنابی')) {
+        const index = colorFilter.indexOf('عنابی');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck30() {
+    document.getElementById('قهوهای').style.display = 'none';
+    document.getElementById('check_19').checked = false;
+    if (colorFilter.includes('قهوهای')) {
+        const index = colorFilter.indexOf('قهوهای');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck31() {
+    document.getElementById('فیروزهای').style.display = 'none';
+    document.getElementById('check_20').checked = false;
+    if (colorFilter.includes('فیروزهای')) {
+        const index = colorFilter.indexOf('فیروزهای');
+        colorFilter.splice(index, 1);
+    }
+};
+function uncheck32() {
+    document.getElementById('فریسایز').style.display = 'none';
+    document.getElementById('check_21').checked = false;
+    if (sizeFilter.includes('فریسایز')) {
+        const index = sizeFilter.indexOf('فریسایز');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck33() {
+    document.getElementById('XS').style.display = 'none';
+    document.getElementById('check_22').checked = false;
+    if (sizeFilter.includes('XS')) {
+        const index = sizeFilter.indexOf('XS');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck34() {
+    document.getElementById('S').style.display = 'none';
+    document.getElementById('check_23').checked = false;
+    if (sizeFilter.includes('S')) {
+        const index = sizeFilter.indexOf('S');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck35() {
+    document.getElementById('M').style.display = 'none';
+    document.getElementById('check_24').checked = false;
+    if (sizeFilter.includes('M')) {
+        const index = sizeFilter.indexOf('M');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck36() {
+    document.getElementById('L').style.display = 'none';
+    document.getElementById('check_25').checked = false;
+    if (sizeFilter.includes('L')) {
+        const index = sizeFilter.indexOf('L');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck37() {
+    document.getElementById('XL').style.display = 'none';
+    document.getElementById('check_26').checked = false;
+    if (sizeFilter.includes('XL')) {
+        const index = sizeFilter.indexOf('XL');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck38() {
+    document.getElementById('XXL').style.display = 'none';
+    document.getElementById('check_27').checked = false;
+    if (sizeFilter.includes('XXL')) {
+        const index = sizeFilter.indexOf('XXL');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck39() {
+    document.getElementById('XXXL').style.display = 'none';
+    document.getElementById('check_28').checked = false;
+    if (sizeFilter.includes('XXXL')) {
+        const index = sizeFilter.indexOf('XXXL');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck40() {
+    document.getElementById('4XL').style.display = 'none';
+    document.getElementById('check_29').checked = false;
+    if (sizeFilter.includes('4XL')) {
+        const index = sizeFilter.indexOf('4XL');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck41() {
+    document.getElementById('34').style.display = 'none';
+    document.getElementById('check_30').checked = false;
+    if (sizeFilter.includes('34')) {
+        const index = sizeFilter.indexOf('34');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck42() {
+    document.getElementById('36').style.display = 'none';
+    document.getElementById('check_31').checked = false;
+    if (sizeFilter.includes('36')) {
+        const index = sizeFilter.indexOf('36');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck43() {
+    document.getElementById('38').style.display = 'none';
+    document.getElementById('check_32').checked = false;
+    if (sizeFilter.includes('38')) {
+        const index = sizeFilter.indexOf('38');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck44() {
+    document.getElementById('40').style.display = 'none';
+    document.getElementById('check_33').checked = false;
+    if (sizeFilter.includes('40')) {
+        const index = sizeFilter.indexOf('40');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck45() {
+    document.getElementById('42').style.display = 'none';
+    document.getElementById('check_34').checked = false;
+    if (sizeFilter.includes('42')) {
+        const index = sizeFilter.indexOf('42');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck46() {
+    document.getElementById('44').style.display = 'none';
+    document.getElementById('check_35').checked = false;
+    if (sizeFilter.includes('44')) {
+        const index = sizeFilter.indexOf('44');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck47() {
+    document.getElementById('46').style.display = 'none';
+    document.getElementById('check_36').checked = false;
+    if (sizeFilter.includes('46')) {
+        const index = sizeFilter.indexOf('46');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck48() {
+    document.getElementById('48').style.display = 'none';
+    document.getElementById('check_37').checked = false;
+    if (sizeFilter.includes('48')) {
+        const index = sizeFilter.indexOf('48');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck49() {
+    document.getElementById('50').style.display = 'none';
+    document.getElementById('check_38').checked = false;
+    if (sizeFilter.includes('50')) {
+        const index = sizeFilter.indexOf('50');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck50() {
+    document.getElementById('S-M').style.display = 'none';
+    document.getElementById('check_39').checked = false;
+    if (sizeFilter.includes('S-M')) {
+        const index = sizeFilter.indexOf('S-M');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck51() {
+    document.getElementById('M-L').style.display = 'none';
+    document.getElementById('check_40').checked = false;
+    if (sizeFilter.includes('M-L')) {
+        const index = sizeFilter.indexOf('M-L');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck52() {
+    document.getElementById('L-XL').style.display = 'none';
+    document.getElementById('check_41').checked = false;
+    if (sizeFilter.includes('L-XL')) {
+        const index = sizeFilter.indexOf('L-XL');
+        sizeFilter.splice(index, 1);
+    }
+};
+function uncheck53() {
+    document.getElementById('XL-XXL').style.display = 'none';
+    document.getElementById('check_42').checked = false;
+    if (brandFilter.includes('XL-XXL')) {
+        const index = brandFilter.indexOf('XL-XXL');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck54() {
+    document.getElementById('jeanwest').style.display = 'none';
+    document.getElementById('check_43').checked = false;
+    if (brandFilter.includes('jeanwest')) {
+        const index = brandFilter.indexOf('jeanwest');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck55() {
+    document.getElementById('lcwaikiki').style.display = 'none';
+    document.getElementById('check_44').checked = false;
+    if (brandFilter.includes('lcwaikiki')) {
+        const index = brandFilter.indexOf('lcwaikiki');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck56() {
+    document.getElementById('koton').style.display = 'none';
+    document.getElementById('check_45').checked = false;
+    if (brandFilter.includes('koton')) {
+        const index = brandFilter.indexOf('koton');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck57() {
+    document.getElementById('jpa').style.display = 'none';
+    document.getElementById('check_46').checked = false;
+    if (brandFilter.includes('jpa')) {
+        const index = brandFilter.indexOf('jpa');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck58() {
+    document.getElementById('celebon').style.display = 'none';
+    document.getElementById('check_47').checked = false;
+    if (brandFilter.includes('celebon')) {
+        const index = brandFilter.indexOf('celebon');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck59() {
+    document.getElementById('sarak').style.display = 'none';
+    document.getElementById('check_48').checked = false;
+    if (brandFilter.includes('sarak')) {
+        const index = brandFilter.indexOf('sarak');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck60() {
+    document.getElementById('zahana').style.display = 'none';
+    document.getElementById('check_49').checked = false;
+    if (brandFilter.includes('zahana')) {
+        const index = brandFilter.indexOf('zahana');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck61() {
+    document.getElementById('bodyspinner').style.display = 'none';
+    document.getElementById('check_50').checked = false;
+    if (brandFilter.includes('bodyspinner')) {
+        const index = brandFilter.indexOf('bodyspinner');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck62() {
+    document.getElementById('salian').style.display = 'none';
+    document.getElementById('check_51').checked = false;
+    if (brandFilter.includes('salian')) {
+        const index = brandFilter.indexOf('salian');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck63() {
+    document.getElementById('jootijeans').style.display = 'none';
+    document.getElementById('check_52').checked = false;
+    if (brandFilter.includes('jootijeans')) {
+        const index = brandFilter.indexOf('jootijeans');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck64() {
+    document.getElementById('aroma').style.display = 'none';
+    document.getElementById('check_53').checked = false;
+    if (brandFilter.includes('aroma')) {
+        const index = brandFilter.indexOf('aroma');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck65() {
+    document.getElementById('lrc').style.display = 'none';
+    document.getElementById('check_54').checked = false;
+    if (brandFilter.includes('lrc')) {
+        const index = brandFilter.indexOf('lrc');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck66() {
+    document.getElementById('ramcott').style.display = 'none';
+    document.getElementById('check_55').checked = false;
+    if (brandFilter.includes('ramcott')) {
+        const index = brandFilter.indexOf('ramcott');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck67() {
+    document.getElementById('jako').style.display = 'none';
+    document.getElementById('check_56').checked = false;
+    if (brandFilter.includes('jako')) {
+        const index = brandFilter.indexOf('jako');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck68() {
+    document.getElementById('ziboo').style.display = 'none';
+    document.getElementById('check_57').checked = false;
+    if (brandFilter.includes('ziboo')) {
+        const index = brandFilter.indexOf('ziboo');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck69() {
+    document.getElementById('only').style.display = 'none';
+    document.getElementById('check_58').checked = false;
+    if (brandFilter.includes('only')) {
+        const index = brandFilter.indexOf('only');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck70() {
+    document.getElementById('ovs').style.display = 'none';
+    document.getElementById('check_59').checked = false;
+    if (brandFilter.includes('ovs')) {
+        const index = brandFilter.indexOf('ovs');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck71() {
+    document.getElementById('superdry').style.display = 'none';
+    document.getElementById('check_60').checked = false;
+    if (brandFilter.includes('superdry')) {
+        const index = brandFilter.indexOf('superdry');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck72() {
+    document.getElementById('newnil').style.display = 'none';
+    document.getElementById('check_61').checked = false;
+    if (brandFilter.includes('newnil')) {
+        const index = brandFilter.indexOf('newnil');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck73() {
+    document.getElementById('alfonsi').style.display = 'none';
+    document.getElementById('check_62').checked = false;
+    if (brandFilter.includes('alfonsi')) {
+        const index = brandFilter.indexOf('alfonsi');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck74() {
+    document.getElementById('rns').style.display = 'none';
+    document.getElementById('check_63').checked = false;
+    if (brandFilter.includes('rns')) {
+        const index = brandFilter.indexOf('rns');
+        brandFilter.splice(index, 1);
+    }
+};
+function uncheck75() {
+    document.getElementById('مجلسی').style.display = 'none';
+    document.getElementById('check_64').checked = false;
+    if (contextFilter.includes('مجلسی')) {
+        const index = contextFilter.indexOf('مجلسی');
+        contextFilter.splice(index, 1);
+    }
+};
+function uncheck76() {
+    document.getElementById('روزمره').style.display = 'none';
+    document.getElementById('check_65').checked = false;
+    if (contextFilter.includes('روزمره')) {
+        const index = contextFilter.indexOf('روزمره');
+        contextFilter.splice(index, 1);
+    }
+};
+function uncheck77() {
+    document.getElementById('راحتی').style.display = 'none';
+    document.getElementById('check_66').checked = false;
+    if (contextFilter.includes('راحتی')) {
+        const index = contextFilter.indexOf('راحتی');
+        contextFilter.splice(index, 1);
+    }
+};
+function uncheck78() {
+    document.getElementById('اداری').style.display = 'none';
+    document.getElementById('check_67').checked = false;
+    if (contextFilter.includes('اداری')) {
+        const index = contextFilter.indexOf('اداری');
+        contextFilter.splice(index, 1);
+    }
+};
+function uncheck79() {
+    document.getElementById('دانشگاهی').style.display = 'none';
+    document.getElementById('check_68').checked = false;
+    if (contextFilter.includes('دانشگاهی')) {
+        const index = contextFilter.indexOf('دانشگاهی');
+        contextFilter.splice(index, 1);
+    }
+};
+function uncheck80() {
+    document.getElementById('مهمانی').style.display = 'none';
+    document.getElementById('check_69').checked = false;
+    if (contextFilter.includes('مهمانی')) {
+        const index = contextFilter.indexOf('مهمانی');
+        contextFilter.splice(index, 1);
+    }
+};
+function uncheck81() {
+    document.getElementById('قیمت').style.display = 'none';
+    priceDownRange = 0;
+    priceUpRange = 5000000;
+    document.getElementById('priceDownRange').value = '';
+    document.getElementById('priceUpRange').value = '';
+
+};
+
+
+
 
 
 for (let a = 0; a < btns.length; a++) {
@@ -436,6 +1178,8 @@ for (let b = 0; b < colorBtns.length; b++) {
         console.log(colorFilter);
     })
 };
+
+
 
 for (let c = 0; c < sizeBtns.length; c++) {
 
@@ -519,7 +1263,7 @@ submitButton.addEventListener('click', (e) => {
                 for (var i = 0, len = digit.length; i < len; i++) {
                     ret += String.fromCharCode(digit.charCodeAt(i) - 1728);
                 }
-         
+
                 return ret*1000;
             });
         }; 
@@ -560,7 +1304,7 @@ submitButton.addEventListener('click', (e) => {
                                     }
                                 }
                             }
-        
+
                         } else {
                             product.style.display = 'none';
                             for (m=0; m<contextFilter.length; m++) {
@@ -601,7 +1345,7 @@ submitButton.addEventListener('click', (e) => {
                                 }
                             }
                         }
-        
+
                     } else if (contextFilter.length === 0) {
                         product.style.display = 'none';
                         for (l=0; l<colorFilter.length; l++) {
@@ -756,7 +1500,7 @@ submitButton.addEventListener('click', (e) => {
                         if (contextFilter.length === 0) {
                             product.style.display = 'none';
                             for (let o=0; o<brandFilter.length; o++) {
-                                if (product.classList.contains(BrandFilter[o])) {
+                                if (product.classList.contains(brandFilter[o])) {
                                     if ((productPrice >= priceDownRange) && (productPrice <= priceUpRange)) {
                                         product.style.display = 'grid';
                                     } else {
@@ -1051,7 +1795,7 @@ submitButton.addEventListener('click', (e) => {
                                     }
                                 }
                             }
-        
+
                         } else {
                             product.style.display = 'none';
                             for (m=0; m<contextFilter.length; m++) {
@@ -1104,7 +1848,7 @@ submitButton.addEventListener('click', (e) => {
                                 }
                             }
                         }
-        
+
                     } else if (contextFilter.length === 0) {
                         product.style.display = 'none';
                         for (l=0; l<colorFilter.length; l++) {
@@ -1617,54 +2361,36 @@ submitButton.addEventListener('click', (e) => {
     });
 });   
 
-//sorting section
+//search box
+function searchFunction() {
+    const input = document.getElementById("myInput");
+    
+    let filter = input.value.toUpperCase();
+    const filterArray = filter.split(' ');
+    console.log(filter);
+    console.log(filterArray);
 
-/*
-
-    function ascendingSort() {
-        var list, i, switching, b, shouldSwitch;
-        list = document.getElementById("productList");
-        
-        switching = true;
-        /* Make a loop that will continue until
-        no switching has been done: */
-        /*
-
-        while (switching) {
-          // start by saying: no switching is done:
-          switching = false;
-          b = list.getElementsByTagName('DIV')[0].getElementsByTagName('DIV')[0].getElementsByTagName('SPAN')[1];
-          // Loop through all list-items:
-          for (i = 0; i < (b.length - 1); i++) {
-            // start by saying there should be no switching:
-            shouldSwitch = false;
-            /* check if the next item should
-            switch place with the current item: */
+    storeProducts.forEach((product) => {
+        product.style.display = 'block';
+        for (let i=0; i < filterArray.length; i++) {
+            if (!product.classList.contains(filterArray[i])) {
+                product.style.display = 'none';
+            } 
             
-            /*
-            if (Number(b[i].innerHTML) > Number(b[i + 1].innerHTML)) {
-              /* if next item is numerically
-              lower than current item, mark as a switch
-              and break the loop: */
-
-              /*
-              shouldSwitch = true;
-              break;
-            }
-          }
-          if (shouldSwitch) {
-            /* If a switch has been marked, make the switch
-            and mark the switch as done: */
-
-            /*
-            b[i].parentNode.insertBefore(b[i + 1], b[i]);
-            switching = true;
-          }
         }
-        console.log(list);
-    }*/
+    })
+    if (filter.length === 0) {
+        storeProducts.forEach((product) => {
+            product.style.display = 'block';
+        })
+    }
+
+};
+
+//sorting section
+    
 
 
 
-//Sorting doesn't work;
-//applied filters should be removed by deleting from the top!
+
+

@@ -41,6 +41,11 @@ html {
     font-size: 32px;
     font-family: 'Architects Daughter';
     padding: 1vw 0;
+    text-decoration: none;
+    color: #22223A;
+}
+.logotype:hover, .logotype:active, .logotype:checked {
+    color: #22223A;
 }
 .logo {
     width: 2%;
@@ -93,11 +98,11 @@ footer {
     padding-left: 2vw;
 }
 
-a, a:active, a:checked {
+.home__nav a, a:active, a:checked {
     text-decoration: none;
     color: #22223A;
 }
 
-a:hover {
+.home__nav a:hover {
     color: #F0005E;
 }

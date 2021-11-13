@@ -175,6 +175,6 @@ a, a:active, a:checked {
     color: #22223A;
 }
 
-a:hover {
+.home__nav a:hover {
     color: #F0005E;
 }

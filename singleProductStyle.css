@@ -43,15 +43,18 @@ html {
     width: 2%;
 
 }
-.products__header span {
+.products__header a {
     float: right;
     font-size: 32px;
     font-family: 'Architects Daughter';
     padding: 1vw 0;
     text-align: center;
     color: #22223A;
+    text-decoration: none;
 }
-
+.products__header a:hover {
+    color: #22223A;
+}
 .products__header .search__container {
     float: left;
 }
