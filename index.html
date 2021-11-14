@@ -3,6 +3,7 @@
     <head>
         <title>Vitrinity</title>
         <link rel="stylesheet" href="./style.css">
+        <script src='./index.js'></script>
     </head>
     
     <body>
@@ -17,13 +18,14 @@
             <!--banner section-->
             <section class='home__banner'>
                 <h1 class='home__title'>ویترین فروشگاه‌های آنلاین</h1>
-                <input class='home__search' type='text' placeholder='جستجو در کالاهای بیش از ۲۵۰ فروشگاه اینستاگرام'/>
+                <form class='home__search' method='[POST]' action="file:///D:/front-end/Summary/Projects/vitrinity/allProducts.html">
+                    <input id='myInput' type='search' name="search" placeholder='جستجو در کالاهای بیش از ۲۵۰ فروشگاه اینستاگرام'/>
+                </form>
                 <section class='home__stats'>
                     <p class='home__text'>کالا از فروشگاه‌های برتر اینستاگرام</p>
                     <p class='home__number'>۴۸۲۰</p>
                 </section>
             </section>
-
             <!--categories section-->
             <section class='home__categories'>
                 <section class='home__box'>
@@ -92,4 +94,3 @@
 
 </html>
 
-<!--search bar doesn't work-->

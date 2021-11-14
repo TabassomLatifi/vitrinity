@@ -2384,8 +2384,29 @@ function searchFunction() {
             product.style.display = 'block';
         })
     }
-
+    
 };
+
+    const x = decodeURIComponent(location.search);
+
+    const searchPart = x.split('=');
+    searchPart.shift();
+    const filterArray2 = searchPart[0].split('+');
+    console.log(filterArray2);
+    storeProducts.forEach((product) => {
+        product.style.display = 'block';
+        for (let i=0; i < filterArray2.length; i++) {
+            if (!product.classList.contains(filterArray2[i])) {
+                product.style.display = 'none';
+            } 
+            
+        }
+    })
+    if (searchPart.length === 0) {
+        storeProducts.forEach((product) => {
+            product.style.display = 'block';
+        })
+    }
 
 //sorting section
     

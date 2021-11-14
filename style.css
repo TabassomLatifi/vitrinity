@@ -68,7 +68,6 @@ html {
     margin-top: 5%;
     margin-bottom: 2%;
 }
-
 .home__search {
     background-image: url('./Resources/SVGs/search.svg');
     background-position: 1vw 1vw;
@@ -82,8 +81,22 @@ html {
     border: none;
     box-shadow: 0px 3px 6px rgba(0,0,0,16%);
     margin-bottom: 2%;
+    background-color: #ffffff;
 }
-::placeholder {
+.home__search input {
+    border: none;
+    border-radius: 8px;
+    text-align: right;
+    width: 80%;
+    height: 100%;
+    font-size: 1.3rem;
+}
+*:focus {
+    outline: none;
+}
+
+
+.home__search::placeholder {
     color: #D3D0CB;
 }
 

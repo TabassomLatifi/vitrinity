@@ -502,6 +502,7 @@ input[type='button'] {
   padding: 0.3vw;
   height: 2.1vw;
   margin: 0.3vw;
+  cursor: pointer;
 }
 
 #allAppliedFilters button img {
@@ -527,6 +528,9 @@ footer {
   cursor: pointer;
   width: 3vw;
 }
+.home__social img:hover {
+  filter: invert(16%) sepia(85%) saturate(5629%) hue-rotate(328deg) brightness(90%) contrast(109%);
+}
 .home__nav {
   float: right;
   font-size: 1rem;
@@ -537,4 +541,12 @@ footer {
 }
 .home__nav span {
   padding-left: 2vw;
+}
+a, a:active, a:checked {
+  text-decoration: none;
+  color: #22223A;
+}
+
+.home__nav a:hover {
+  color: #F0005E;
 }
