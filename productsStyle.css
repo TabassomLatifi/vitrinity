@@ -149,6 +149,17 @@ html {
     position: relative;
     cursor: pointer;
 }
+.item:hover .pricebox {
+  width: 80%;
+}
+.item:hover .price {
+  color:#F0005E;
+  margin-right: 6vw;
+}
+.item:hover .productName {
+  display: block;
+}
+
 /*sorting section*/
 .sorting {
     grid-column: 1 / span 3;
@@ -162,13 +173,34 @@ html {
 }
 .sorting strong {
     padding-left: 2.5vw;
+    float: right;
+    margin-right: 2.5vw;
 }
 .criterion {
+    border: none!important;
+}
+.sorting .active {
+    background-color: #ffffff;
+    padding-right: 0.5vw;
     padding: 0 1vw;
     border-left: 1px solid #D3D0CB;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
 }
-.sorting span {
-    padding-right: 0.5vw;
+.sorting .inactive {
+  background-color: #ffffff;
+  padding-right: 0.5vw;
+  padding: 0 1vw;
+  border-left: 1px solid #D3D0CB;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  color: #D3D0CB;
+}
+.sorting .active:hover {
+  color: #F0005E;
+  cursor: pointer;
 }
 /*filters section*/
 
@@ -435,6 +467,7 @@ input[type='button'] {
     grid-column: 1 / span 3;
     grid-row: 2 / span 5;
     display: grid;
+    direction: rtl;
     grid: auto-flow 16.25vw / repeat(3, 16.25vw);
     grid-gap: 1.5625vw;
 }
@@ -455,6 +488,25 @@ input[type='button'] {
     width: 50%;
     height: 20%;
     border-radius: 4px 0px 0px 4px;
+}
+
+.pricebox:hover {
+    width: 80%;
+}
+.pricebox:hover .price {
+  color: #F0005E;
+  margin-right: 6vw;
+}
+.pricebox:hover .productName {
+  display: block;
+}
+.productName {
+  display: none;
+  font-size: 0.9rem;
+  position: absolute;
+  right: 0.4vw;
+  top: 1vw;
+  color: #4F4E60;
 }
 .price {
     font-size: 2rem;
@@ -478,12 +530,36 @@ input[type='button'] {
     height: 20%;
     border-radius: 0px 4px 4px 0px;
 }
+
+.unavailable:hover {
+  width: 50%;
+}
+
+.unavailable:hover + .pricebox {
+  display: none;
+}
+.unavailable:hover img {
+    width: 20%;
+    position: relative;
+    right: 2.3vw;
+    bottom: 1.5vw;
+}
+.unavailable:hover span {
+  display: block;
+  font-size: 0.9rem;
+}
 .unavailable img {
     width: 50%;
     height: 50%;
     margin-top: 29%;
 }
-
+.unavailable span {
+  display: none;
+  position: relative;
+  bottom: 4vw;
+  left: 1vw;
+  color: #fff;
+}
 /*applied filters*/
 
 #allAppliedFilters {

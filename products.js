@@ -452,32 +452,6 @@ function toggleFilter() {
 availableBtn.addEventListener('click', toggleFilter);
 
 //remove applied filters
-
-/*
-for (let g = 0; g < appliedFilters.length; g++) {
-    appliedFilters[g].addEventListener('click', (e) => {
-        if (allAppliedFilter.includes(e.target.dataset.filter)) {
-            const index8 = allAppliedFilter.indexOf(e.target.dataset.filter);
-            allAppliedFilter.splice(index8, 1);
-        } else {
-            allAppliedFilter.push(e.target.dataset.filter);
-        }
-        console.log(allAppliedFilter);
-        if (allAppliedFilter.length === 0) {
-            return;
-        } else {
-            appliedFilters.forEach((appliedfilter) => {
-                for(let h=0; h < allAppliedFilter.length; h++) {
-                    if (appliedfilter.classList.contains(allAppliedFilter[h])) {
-                        appliedfilter.style.display = 'none';
-                        }
-                    }
-                }
-            })
-        }
-    });
-}
-*/
 //applied filters functions (onclick)
 function uncheck1() {
     document.getElementById('فقطموجود').style.display = 'none';
@@ -2409,8 +2383,72 @@ function searchFunction() {
     }
 
 //sorting section
-    
+  
+function sortListAscending() {
+    String.prototype.toEnDigit = function() {
+        return this.replace(/[\u06F0-\u06F9]+/g, function(digit) {
+            var ret = '';
+            for (var i = 0, len = digit.length; i < len; i++) {
+                ret += String.fromCharCode(digit.charCodeAt(i) - 1728);
+            }
 
+            return ret*1000;
+        });
+    }; 
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("productList");
+    switching = true;
+    while (switching) {
+      switching = false;
+      b = list.getElementsByTagName("SECTION");
+      console.log(b);
+      for (i = 0; i < (b.length - 1); i++) {
+        shouldSwitch = false;        
+        if (Number(b[i].getElementsByTagName('div')[0].getElementsByTagName('span')[1].innerHTML.toEnDigit()) > Number(b[i + 1].getElementsByTagName('div')[0].getElementsByTagName('span')[1].innerHTML.toEnDigit())) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+      }
+    }
+  };
+
+  function sortListDescending() {
+    String.prototype.toEnDigit = function() {
+        return this.replace(/[\u06F0-\u06F9]+/g, function(digit) {
+            var ret = '';
+            for (var i = 0, len = digit.length; i < len; i++) {
+                ret += String.fromCharCode(digit.charCodeAt(i) - 1728);
+            }
+
+            return ret*1000;
+        });
+    }; 
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("productList");
+    switching = true;
+    while (switching) {
+      switching = false;
+      b = list.getElementsByTagName("SECTION");
+      console.log(b);
+      for (i = 0; i < (b.length - 1); i++) {
+        shouldSwitch = false;        
+        if (Number(b[i].getElementsByTagName('div')[0].getElementsByTagName('span')[1].innerHTML.toEnDigit()) < Number(b[i + 1].getElementsByTagName('div')[0].getElementsByTagName('span')[1].innerHTML.toEnDigit())) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+      }
+    }
+  }
+    
+    
 
 
 

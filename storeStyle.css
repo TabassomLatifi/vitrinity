@@ -1,0 +1,321 @@
+/*universal styles*/
+@font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/architectsdaughter/v11/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvTYlg4w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: iranSans;
+    src: url(./Resources/fonts/ttf/IRANSansWeb.ttf);
+}
+* {
+    box-sizing: border-box;
+    font-family: 'iranSans', tahoma, sans-serif;
+
+}
+body {
+    margin: 0;
+    background-color: #F9F9F9;
+    overflow-x: hidden;
+
+}
+html {
+  font-size: 16px;
+
+}
+/*header section*/
+
+.products__header {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0,0,0,16%);
+}
+
+.products__header img {
+    float: right;
+    margin: 1.5vw 15.15625vw 1vw 1vw;
+    width: 2%;
+
+}
+.products__header a {
+    float: right;
+    font-size: 32px;
+    font-family: 'Architects Daughter';
+    padding: 1vw 0;
+    text-align: center;
+    color: #22223A;
+    text-decoration: none;
+    color: #22223A;
+}
+
+.products__header .search__container {
+    float: left;
+}
+
+.products__header input[type=text] {
+    margin: 1vw 0;
+    padding: 0.8vw 1.2vw;
+    font-size: 1rem;
+    border: none;
+    width: 15vw;
+    height: 3.2vw;
+    background-color: #F9F9F9;
+    border-radius: 0px 8px 8px 0px;
+    text-align: right;
+}
+
+.products__header .search__container button {
+    float: left;
+    padding: 0.8vw;
+    margin-top: 1vw;
+    margin-left: 15.15625vw;
+    background-color: #4F4E60;
+    font-size: 1rem;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+    cursor: pointer;
+    width: 3.2vw;
+    height: 3.2vw;
+    background-image: url('./Resources/SVGs/loupe.svg');
+    background-position: 0.8vw 0.8vw;
+    background-repeat: no-repeat;
+    background-size: 1.5vw 1.5vw;
+}
+
+::placeholder {
+    font-size: 1rem;
+    color: #4F4E60;
+}
+/*store information section*/
+
+.store__title {
+    display: grid;
+    grid-template-columns: repeat (4, 16.25vw);
+    grid-gap: 1.5625vw;
+    
+    
+  }
+  .store__logo {
+      grid-column: 4;
+      grid-row: 1 / span 3;
+      height: 12vw;
+      width: 12vw;
+      border-radius: 50%;
+      outline: 0.5rem double #F0005E;
+      margin-top: 4.5vw;
+      margin-right: 4vw;
+      padding: 2vw;
+      fill: white;
+
+  }
+  
+  .store__title h1 {
+      grid-column: 3;
+      grid-row: 1;
+      text-align: right;
+      margin-top: 6vw;
+      font-size: 2rem;
+      color: #22223A;
+      padding-right: 2vw;
+
+  
+  }
+  .store__title h2 {
+      grid-column: 3;
+      grid-row: 1;
+      text-align: right;
+      margin-top: 10vw;
+      font-size: 1rem;
+      color: #22223A;
+      padding-right: 2vw;
+  }
+
+  .store__title a {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: center;
+    margin-top: 13vw;
+    font-size: 1.3rem;
+    padding: 0.5vw;
+    color: #ffffff;
+    background-color: #F0005E;
+    border-radius: 4px;
+    border: none;
+    margin-right: 2vw;
+    width: 19.6875vw;
+    position: absolute;
+    left: 48vw;
+
+
+}
+.follower {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+    margin-top: 5vw;
+    font-size: 1.4rem;
+    color: #22223A;
+    padding-top: 2vw;
+    margin-left: 4vw;
+    
+
+
+}
+.follower img {
+    position: absolute;
+    top: 11.5vw;
+    left: 28vw;
+}
+
+
+.numberOfProducts {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+    margin-top: 10vw;
+    font-size: 1.4rem;
+    padding-top: 2vw;
+    color: #22223A;
+   
+}
+.numberOfProducts img {
+    position: absolute;
+    top: 16.5vw;
+    left: 28vw;
+
+}
+.store_icon {
+    background-color: #F6EFF2;
+    border: none;
+    border-radius: 4px;
+    width: 3.90625vw;
+    height: 3.90625;
+    padding: 0.88vw 0.78vw;
+
+}
+.number {
+    float: right;
+    padding-left: 0.5vw;
+}
+  
+
+/*introduction section*/
+
+.introduction {
+    margin: 5.2vw 16.45vw;
+    text-align: right;
+}
+/*products section*/
+
+
+.item {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 1.875rem;
+    width: 22.1875;
+    position: relative;
+    cursor: pointer;
+}
+
+.products {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 5;
+    display: grid;
+    direction: rtl;
+    grid: auto-flow 22.1875vw / repeat(3, 22.1875vw);
+    grid-gap: 1.5625vw;
+    margin: 4vw 15.15625vw;
+}
+.products img {
+    width: 22.1875vw;
+    height: 22.1875vw;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/*price box*/
+.pricebox {
+    position: absolute;
+    bottom: 10%;
+    right: 0px;
+    z-index: 2;
+    background-color: #FFFFFF;
+    width: 50%;
+    height: 20%;
+    border-radius: 4px 0px 0px 4px;
+}
+.price {
+    font-size: 2.5rem;
+    color: #4F4E60;
+    float: right;
+    padding-right: 0.8vw;
+    text-decoration: none;
+}
+.currency {
+    font-size: 1rem;
+    color: #4F4E60;
+    text-decoration: none;
+}
+.unavailable {
+    position: absolute;
+    bottom: 10%;
+    left: 0px;
+    z-index: 2;
+    background-color: #F0005E;
+    width: 20%;
+    height: 20%;
+    border-radius: 0px 4px 4px 0px;
+}
+.unavailable img {
+    width: 50%;
+    height: 50%;
+    margin-top: 29%;
+}
+
+
+/*Footer Section*/
+footer {
+    background-color: #ffffff;
+    box-shadow: 0px -3px 6px rgba(0,0,0,16%);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+  .home__social {
+    float: left;
+    padding-left: 2vw;
+  }
+  .home__social img {
+    padding: 1vw 1vw 1vw 0;
+    cursor: pointer;
+    width: 3vw;
+  }
+  .home__social img:hover {
+    filter: invert(16%) sepia(85%) saturate(5629%) hue-rotate(328deg) brightness(90%) contrast(109%);
+  }
+  .home__nav {
+    float: right;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 2.5vw;
+    padding-top: 1.25vw;
+  
+  }
+  .home__nav span {
+    padding-left: 2vw;
+  }
+  a, a:active, a:checked {
+    text-decoration: none;
+    color: #22223A;
+  }
+  
+  .home__nav a:hover {
+    color: #F0005E;
+  }

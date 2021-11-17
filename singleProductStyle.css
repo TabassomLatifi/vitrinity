@@ -171,7 +171,7 @@ main {
     color: #ffffff;
     margin-top: -1.5vw;
 }
-a, a:hover, a:focus, a:active {
+.productbutton a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: #fff;
 }
@@ -184,6 +184,10 @@ a, a:hover, a:focus, a:active {
 .producttitle aside {
     font-size: 0.8rem;
     margin-right: 1.8625vw;
+    
+}
+.producttitle aside:hover {
+    color: #F0005E;
     
 }
 .producttitle button {
