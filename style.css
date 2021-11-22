@@ -38,7 +38,7 @@ html {
 }
 
 .logotype {
-    font-size: 32px;
+    font-size: 2rem;
     font-family: 'Architects Daughter';
     padding: 1vw 0;
 }
@@ -47,14 +47,21 @@ html {
     margin: 1vw 15.15625vw 1vw 1vw;
     text-align: right;
 }
+@media only screen and (max-width: 592px) {
 
+    .logotype {
+        font-size: 1.25rem;
+    }
+    .logo {
+        width: 5%;
+    }
+}  
 
 /*banner section*/
 
 .home__banner {
-    background-image: url('./Resources/images/background2.png');
-    background-repeat: no-repeat;
-    background-position: top center;
+    background-image: url('./Resources/images/background.png');
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -113,7 +120,35 @@ html {
     padding-right: 0.5rem;
 
 }
-
+@media only screen and (max-width: 592px) {
+    
+    .home__banner {
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: -65vw;
+    }
+    .home__title {
+        font-size: 1.25rem;
+        margin-top: 4%;
+        margin-bottom: 1%;
+    }
+    .home__search {
+        background-position: 1.5vw 1.5vw;
+        background-size: 6vw 6vw;
+        width: 65%;
+        height: 8%;
+    }
+    .home__search input {
+        width: 80%;
+        height: 100%;
+        font-size: 0.75rem;
+    }
+    .home__stats {
+        font-size: 0.75rem;
+        margin-top: 25vw;
+    }
+    
+}
 
 /*categories section*/
 
@@ -149,6 +184,19 @@ html {
     height: 50%;
     margin-top: 10%;
     margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 592px) {
+
+    .home__categories {
+        display: grid;
+        grid-template-columns: repeat(3, 32.22vw);
+        grid-template-rows: repeat(4, 32.22vw);
+        grid-gap: 0.83vw;
+        justify-content: center;
+        margin-bottom: 12.5vw;
+    }
+    
 }
 
 /*Footer Section*/
@@ -193,4 +241,12 @@ a, a:active, a:checked {
 
 .home__nav a:hover {
     color: #F0005E;
+}
+
+@media only screen and (max-width: 592px) {
+
+    .home__social img {
+        width: 5vw;
+    }
+    
 }
