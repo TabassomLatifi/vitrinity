@@ -164,6 +164,9 @@ html {
 }
 
 /*sorting section*/
+#popupSorting {
+  display: none;
+}
 .sorting {
     grid-column: 1 / span 3;
     grid-row: 1;

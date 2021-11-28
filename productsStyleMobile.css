@@ -143,11 +143,15 @@ html {
 
     .mobileSorting {
         float: right;
-        margin: 3vw 10vw 3vw 0;
-        padding-left: 10vw;
+        margin: 3vw 0vw 3vw 0;
         border-left: 2px solid #D3D0CB;
         align-content: center;
+        width: 50%;
+        text-align: center;
 
+    }
+    .mobileSorting img {
+        width: 5vw;
     }
     .mobileSorting button {
         background-color: #fff;
@@ -155,7 +159,12 @@ html {
     }
 
     .mobileFilters {
-        margin: 3vw 10vw;        
+        margin: 3vw 0vw;   
+        width: 50%;    
+        text-align: center; 
+    }
+    .mobileFilters img {
+        width: 5vw;
     }
     .mobileFilters button {
         background-color: #fff;
@@ -196,7 +205,7 @@ html {
 }
 #popupSorting strong {
     text-align: right;
-    padding: 3vw;
+    padding: 3vw 3vw 3vw 0vw;
     border-bottom: 1px solid #D3D0CB;
     z-index: 4;
     box-shadow: 0px 1px 3px rgba(0,0,0,16%);
@@ -208,6 +217,13 @@ html {
     text-align: right;
 
 }
+#popupSorting button img {
+    margin-right: 48vw;
+}
+#popupSorting .inactive {
+    color: #D3D0CB;
+}
+
 
 /*filters section*/
 

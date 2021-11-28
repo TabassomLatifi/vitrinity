@@ -3,7 +3,7 @@
     <head>
         <title>Vitrinity</title>
         <link rel="stylesheet" href="./productsStyle.css" type="text/css">
-        <link rel="stylesheet" media="screen and (max-device-width: 400px)" href="./productsStyleMobile.css" type="text/css">
+        <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="./productsStyleMobile.css" type="text/css">
         <script src="products.js" async></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <!--mobile sorting list--> 
-            <div id='popupSorting'><strong>مرتب‌سازی بر اساس</strong>
+            <div id='popupSorting'><strong><button onclick="hideSortingList()"><img src="./Resources/SVGs/cancel.svg" alt=""></button>مرتب‌سازی بر اساس</strong>
                 <button onclick="sortListDescending()" class='criterion active'>قیمت از زیاد به کم</button>
                 <button onclick="sortListAscending()" class='active'>قیمت از کم به زیاد</button>
                 <button class='inactive'>جدیدترین</button>

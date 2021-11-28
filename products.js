@@ -2400,7 +2400,7 @@ function sortListAscending() {
     switching = true;
     while (switching) {
       switching = false;
-      b = list.getElementsByTagName("SECTION");
+      b = list.getElementsByClassName("item");
       console.log(b);
       for (i = 0; i < (b.length - 1); i++) {
         shouldSwitch = false;        
@@ -2432,7 +2432,7 @@ function sortListAscending() {
     switching = true;
     while (switching) {
       switching = false;
-      b = list.getElementsByTagName("SECTION");
+      b = list.getElementsByClassName("item");
       console.log(b);
       for (i = 0; i < (b.length - 1); i++) {
         shouldSwitch = false;        
@@ -2455,6 +2455,12 @@ function sortListAscending() {
       } else {
           popupSorting.style.display = 'none';
       }
+  }
+
+  function hideSortingList() {
+    const popupSorting = document.getElementById('popupSorting');
+    popupSorting.style.display = 'none';
+
   }
     
     
