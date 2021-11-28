@@ -2,8 +2,10 @@
 <html lang='fa'>
     <head>
         <title>Vitrinity</title>
-        <link rel="stylesheet" href="./productsStyle.css">
+        <link rel="stylesheet" href="./productsStyle.css" type="text/css">
+        <link rel="stylesheet" media="screen and (max-device-width: 400px)" href="./productsStyleMobile.css" type="text/css">
         <script src="products.js" async></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
 
     <body>
@@ -23,9 +25,26 @@
         <main>
             <!--category title-->
             <div class='products__category'>
-                <img src="./Resources/SVGs/coat-white.svg" alt="Coat">
+                <img class='productLogo' src="./Resources/SVGs/coat-white.svg" alt="Coat">
                 <h1>مانتو و پالتو</h1>
                 <h2>بیش از ۲۲۷ کالا در ۱۷ فروشگاه</h2>
+                <div class='mobileVersion'>
+                    <div class='mobileSorting'>
+                        <button onclick="showSortingList()">جدیدترین</button>
+                        <img src="./Resources/SVGs/ascending-sort-svgrepo-com.svg" alt="">
+                    </div>
+                    <div class='mobileFilters'>
+                        <button onclick="showFiltersList()">قیمت، سایز، جنس</button>
+                        <img src="./Resources/SVGs/6351904_filter_filtering_filters_funnel_sort_icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--mobile sorting list--> 
+            <div id='popupSorting'><strong>مرتب‌سازی بر اساس</strong>
+                <button onclick="sortListDescending()" class='criterion active'>قیمت از زیاد به کم</button>
+                <button onclick="sortListAscending()" class='active'>قیمت از کم به زیاد</button>
+                <button class='inactive'>جدیدترین</button>
+                <button class='inactive'>پربازدیدترین</button>
             </div>
             <!--products section-->
             <div class='products__list'>

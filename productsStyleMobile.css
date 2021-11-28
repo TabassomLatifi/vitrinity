@@ -1,0 +1,317 @@
+/*universal styles*/
+@font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/architectsdaughter/v11/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvTYlg4w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: iranSans;
+    src: url(./Resources/fonts/ttf/IRANSansWeb.ttf);
+}
+* {
+    box-sizing: border-box;
+    font-family: 'iranSans', tahoma, sans-serif;
+
+}
+body {
+    margin: 0;
+    background-color: #F9F9F9;
+    overflow-x: hidden;
+
+}
+html {
+  font-size: 16px;
+
+}
+/*header section*/
+
+.products__header {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 6px rgba(0,0,0,16%);
+}
+
+.products__header img {
+    float: right;
+    margin: 4.1vw 4.1vw 4.1vw 4.1vw;
+    width: 8%;
+
+}
+.products__header a {
+    float: right;
+    font-size: 20px;
+    font-family: 'Architects Daughter';
+    padding: 4.1vw 0;
+    text-align: center;
+    color: #22223A;
+    text-decoration: none;
+    color: #22223A;
+}
+
+.products__header .search__container {
+    float: left;
+}
+
+.products__header input[type=text] {
+    margin: 4.1vw 0;
+    padding: 0.8vw 1.2vw;
+    border: none;
+    width: 35vw;
+    height: 8vw;
+    background-color: #F9F9F9;
+    border-radius: 0px 8px 8px 0px;
+    text-align: right;
+}
+
+.products__header .search__container button {
+    float: left;
+    padding: 0.8vw;
+    margin-top: 4.1vw;
+    margin-left: 4.1vw;
+    background-color: #4F4E60;
+    border-radius: 8px 0px 0px 8px;
+    border: none;
+    cursor: pointer;
+    width: 8vw;
+    height: 8vw;
+    background-image: url('./Resources/SVGs/loupe.svg');
+    background-position: 1.7vw 1.7vw;
+    background-repeat: no-repeat;
+    background-size: 4vw 4vw;
+}
+
+::placeholder {
+    font-size: 0.6rem;
+    color: #4F4E60;
+}
+/*category title*/
+.products__category {
+    display: grid;
+    grid-template-columns: repeat (3, 32.22vw);
+    grid-gap: 0.83vw;
+  }
+  .products__category .productLogo {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      height: 18.33vw;
+      width: 18.33vw;
+      border-radius: 50%;
+      background-color: #22223A;
+      outline: 0.3rem double #22223A;
+      margin-top: 7vw;
+      padding: 2vw;
+      fill: white;
+  }
+  
+  .products__category h1 {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: right;
+      margin-top: 8.3vw;
+      font-size: 1.5rem;
+      color: #22223A;
+      padding-right: 2vw;
+  
+  }
+  .products__category h2 {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: right;
+      margin-top: 19vw;
+      font-size: 0.7rem;
+      color: #22223A;
+      padding-right: 2vw;
+  }
+
+  /*filters section*/
+
+  .mobileVersion {
+      box-shadow: 0px 3px 6px rgba(0,0,0,16%);
+      background-color: #fff;
+      background-size: contain;
+      display: inline;
+      grid-column: 1 / span 3;
+      grid-row: 2;
+      margin-top: 7vw;
+    }
+
+    .mobileSorting {
+        float: right;
+        margin: 3vw 10vw 3vw 0;
+        padding-left: 10vw;
+        border-left: 2px solid #D3D0CB;
+        align-content: center;
+
+    }
+    .mobileSorting button {
+        background-color: #fff;
+        border: none;
+    }
+
+    .mobileFilters {
+        margin: 3vw 10vw;        
+    }
+    .mobileFilters button {
+        background-color: #fff;
+        border: none;
+    }
+
+  /*products section*/
+
+.products__list {
+    display: grid;
+    grid-gap: 0.83vw;
+    margin: 4vw 0.83vw ;
+    justify-items: center;
+    
+}
+
+.item {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 0.5rem;
+    width: 32.22vw;
+    position: relative;
+    cursor: pointer;
+}
+
+/*sorting section*/
+.sorting {
+    display: none;
+}
+#popupSorting {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: #fff;
+
+}
+#popupSorting strong {
+    text-align: right;
+    padding: 3vw;
+    border-bottom: 1px solid #D3D0CB;
+    z-index: 4;
+    box-shadow: 0px 1px 3px rgba(0,0,0,16%);
+}
+#popupSorting button {
+    background-color: #fff;
+    border: none;
+    padding: 3vw;
+    text-align: right;
+
+}
+
+/*filters section*/
+
+.filters {
+    display: none;
+}
+/*products section*/
+
+.products {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 5;
+    display: grid;
+    direction: rtl;
+    grid: auto-flow 32.22vw / repeat(3, 32.22vw);
+    grid-gap: 0.83vw;
+}
+.products img {
+    width: 32.22vw;
+    height: 32.22vw;
+    object-fit: cover;
+    border-radius: 4px;
+}
+/*price box*/
+.pricebox {
+    position: absolute;
+    bottom: 10%;
+    right: 0px;
+    z-index: 2;
+    background-color: #FFFFFF;
+    width: 50%;
+    height: 20%;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.price {
+    font-size: 0.8rem;
+    color: #4F4E60;
+    float: right;
+    padding-right: 0.3vw;
+    text-decoration: none;
+}
+.currency {
+    font-size: 0.3rem;
+    color: #4F4E60;
+    text-decoration: none;
+    position: absolute;
+    top: 2vw;
+}
+.unavailable {
+    position: absolute;
+    bottom: 10%;
+    left: 0px;
+    z-index: 2;
+    background-color: #F0005E;
+    width: 20%;
+    height: 20%;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.unavailable img {
+    width: 50%;
+    height: 50%;
+    margin-top: 29%;
+}
+.unavailable span {
+  display: none;
+  position: relative;
+  bottom: 4vw;
+  left: 1vw;
+  color: #fff;
+}
+
+/*Footer Section*/
+footer {
+    background-color: #ffffff;
+    box-shadow: 0px -3px 6px rgba(0,0,0,16%);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+  .home__social {
+    float: left;
+    padding-left: 2vw;
+  }
+  .home__social img {
+    padding: 1vw 2vw 1vw 0;
+    cursor: pointer;
+    width: 6vw;
+  }
+
+  .home__nav {
+    float: right;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-right: 2.5vw;
+    padding-top: 1.25vw;
+  
+  }
+  .home__nav span {
+    padding-left: 2vw;
+  }
+  a, a:active, a:checked {
+    text-decoration: none;
+    color: #22223A;
+  }
+  

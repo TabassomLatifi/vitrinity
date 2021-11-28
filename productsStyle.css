@@ -26,6 +26,9 @@ html {
   font-size: 16px;
 
 }
+.mobileVersion {
+  display: none;
+}
 /*header section*/
 
 .products__header {
@@ -99,7 +102,7 @@ html {
   grid-template-columns: repeat (4, 16.25vw);
   grid-gap: 1.5625vw;
 }
-.products__category img {
+.products__category .productLogo {
     grid-column: 4;
     grid-row: 1 / span 3;
     height: 12vw;

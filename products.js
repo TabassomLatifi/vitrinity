@@ -2447,6 +2447,15 @@ function sortListAscending() {
       }
     }
   }
+
+  function showSortingList() {
+      const popupSorting = document.getElementById('popupSorting');
+      if (popupSorting.style.display = 'none') {
+          popupSorting.style.display = 'grid';
+      } else {
+          popupSorting.style.display = 'none';
+      }
+  }
     
     
 
