@@ -95,6 +95,24 @@ html {
     font-size: 1rem;
     color: #4F4E60;
 }
+@media only screen and (max-width: 1242px) and (min-width: 600px) {
+  .products__header img {
+    width: 2rem;
+  }
+  .products__header input[type=text] {
+    width: 22vw;
+    height: 2.5rem;
+  }
+  .products__header .search__container button {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 1.5rem 1.5rem;
+    background-position: 0.5rem 0.5rem;
+  }
+  ::placeholder {
+    font-size: 0.7rem;
+  }
+}
 
 /*category title*/
 .products__category {
@@ -135,6 +153,23 @@ html {
     padding-right: 2vw;
 }
 
+  .products__category {
+    grid-template-columns: repeat (4, 20vw);
+  }
+  .products__category h1 {
+    margin-top: 4vw;
+    font-size: 2rem;
+    padding-right: 3vw;
+
+  }
+.products__category h2 {
+    margin-top: 12vw;
+    font-size: 1.2rem;
+    padding-right: 3vw;
+
+  }
+
+
 /*products section*/
 
 .products__list {
@@ -163,6 +198,16 @@ html {
   display: block;
 }
 
+@media only screen and (max-width: 1150px) and (min-width: 600px) {
+  .products__list {
+    margin: 4vw 10vw;
+    grid-gap: 1vw;
+  }
+.item {
+    font-size: 1rem;
+    width: 20vw;
+  }
+}
 /*sorting section*/
 #popupSorting {
   display: none;
@@ -208,13 +253,53 @@ html {
   color: #F0005E;
   cursor: pointer;
 }
-/*filters section*/
 
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+  .sorting {
+    height: 5vw;
+    width: 62vw;
+    font-size: 0.7rem;
+}
+.sorting strong {
+  padding-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+.sorting .active {
+  font-size: 0.6rem;
+
+}
+.sorting .inactive {
+  font-size: 0.6rem;
+}
+}
+@media only screen and (max-width: 1150px) and (min-width: 801px) {
+  .sorting {
+    height: 4vw;
+    width: 62vw;
+    font-size: 1rem;
+}
+.sorting strong {
+  padding-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+.sorting .active {
+  font-size: 0.8rem;
+
+}
+.sorting .inactive {
+  font-size: 0.8rem;
+}
+}
+/*filters section*/
+#popupFilters {
+  display: none;
+}
 .filters {
     grid-column: 4;
     grid-row: 1 / span 12;
     box-shadow: 0px 3px 6px rgba(0,0,0,16%);
 }
+
 
 /*availability filter*/
 .switch {
@@ -279,6 +364,28 @@ html {
       margin-left: 1.3vw;
       padding: 1vw 0.25vw;
   }
+  @media only screen and (max-width: 1150px) and (min-width: 600px) {
+    .filters__available {
+      font-size: 0.8rem;
+    }
+    .switch {
+      width: 36px;
+      height: 16px;
+    }
+    .slider {
+      border-radius: 16px;
+
+    }
+    .slider:before {
+      height: 12.8px;
+      width: 12.8px;
+    }
+    input:checked + .slider:before {
+      -webkit-transform: translateX(20.8px);
+      -ms-transform: translateX(20.8px);
+      transform: translateX(20.8px);
+    }
+  }
 
   /*texture filter*/
 
@@ -324,6 +431,7 @@ html {
     -ms-user-select: none;
     user-select: none;
   }
+
   
   /* Hide the browser's default checkbox*/
   .container input {
@@ -348,6 +456,7 @@ html {
   .text {
       padding-right: 1.5625vw;
     }
+   
   
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
@@ -383,6 +492,45 @@ html {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  @media only screen and (max-width: 850px) and (min-width: 600px) {
+    .container {
+      font-size: 0.5rem;
+    }
+    .checkmark {
+      height: 11.9px;
+      width: 11.9px;
+    }
+    .text {
+      padding-right: 2vw;
+    }
+    .container .checkmark:after {
+      left: 2.8px;
+      top: 0.7px;
+      width: 2.8px;
+      height: 5.6px;
+    }
+
+  }
+  @media only screen and (max-width: 1150px) and (min-width: 850px) {
+    .container {
+      font-size: 0.7rem;
+    }
+    .checkmark {
+      height: 13.6px;
+      width: 13.6px;
+    }
+    .text {
+      padding-right: 2vw;
+    }
+    .container .checkmark:after {
+      left: 3.2px;
+      top: 0.8px;
+      width: 3.2px;
+      height: 6.4px;
+    }
+
+  }
+
 
 /*colors filter*/
  .colorsFilter {
@@ -431,6 +579,19 @@ html {
   .filtersTitle .more img  {
     padding-left: 0.5vw!important;
   }
+
+  @media only screen and (max-width: 850px) and (min-width: 600px) {
+    input[type="checkbox"] + label {
+      padding: 3.2px 4.8px;
+      margin-bottom: 0.4vw;
+      font-size: 0.6rem;
+    }
+    input[type="checkbox"] + label img {
+      padding-right: 4.8px;
+      padding-top: 2.4px;
+    }
+
+  }
 /*price filter*/
 .priceTitle span {
   font-size: 1rem;
@@ -453,6 +614,18 @@ html {
 .lastFilter {
   border: none !important;
 }
+@media only screen and (max-width: 850px) and (min-width: 600px) {
+  .priceTitle span {
+    font-size: 0.8rem;
+  }
+  .priceInput {
+    width: 13.5vw;
+    height: 2.5vw;
+  }
+  .priceInput::placeholder {
+    font-size: 0.6rem;
+  }
+}
 /*filters button*/ 
 input[type='button'] {
   width: 13.64vw;
@@ -465,6 +638,13 @@ input[type='button'] {
   margin-top: 1vw;
   margin-bottom: 2vw;
   cursor: pointer;
+}
+@media only screen and (max-width: 850px) and (min-width: 600px) {
+  input[type='button'] {
+    width: 16vw;
+    height: 3vw;
+    font-size: 0.8rem;
+  }
 }
 
 /*products section*/
@@ -484,6 +664,17 @@ input[type='button'] {
     border-radius: 4px;
 }
 
+@media only screen and (max-width: 1150px) and (min-width: 600px) {
+  .products {
+    grid: auto-flow 20vw / repeat(3, 20vw);
+    grid-gap: 1vw;
+}
+.products img {
+    width: 20vw;
+    height: 20vw;
+}
+}
+
 /*price box*/
 .pricebox {
     position: absolute;
@@ -491,7 +682,7 @@ input[type='button'] {
     right: 0px;
     z-index: 2;
     background-color: #FFFFFF;
-    width: 50%;
+    width: 55%;
     height: 20%;
     border-radius: 4px 0px 0px 4px;
 }
@@ -515,14 +706,14 @@ input[type='button'] {
   color: #4F4E60;
 }
 .price {
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: #4F4E60;
     float: right;
-    padding-right: 0.5vw;
+    padding-right: 0.4vw;
     text-decoration: none;
 }
 .currency {
-    font-size: 0.625rem;
+    font-size: 0.6rem;
     color: #4F4E60;
     text-decoration: none;
 }
@@ -566,6 +757,52 @@ input[type='button'] {
   left: 1vw;
   color: #fff;
 }
+@media only screen and (max-width: 850px) and (min-width: 600px) {
+  .pricebox {
+    width: 60%;
+}
+.price {
+  font-size: 1rem;
+  padding-right: 1vw;;
+
+}
+.productName {
+  font-size: 0.5rem;
+
+}
+.currency {
+  font-size: 0.4rem;
+}
+.unavailable:hover span {
+  font-size: 0.5rem;
+}
+.unavailable span {
+  bottom: 5vw;
+}
+}
+@media only screen and (max-width: 1150px) and (min-width: 850px) {
+  .pricebox {
+    width: 60%;
+}
+.price {
+  font-size: 1.2rem;
+  padding-right: 1vw;;
+
+}
+.productName {
+  font-size: 0.6rem;
+
+}
+.currency {
+  font-size: 0.5rem;
+}
+.unavailable:hover span {
+  font-size: 0.6rem;
+}
+.unavailable span {
+  bottom: 4.5vw;
+}
+}
 /*applied filters*/
 
 #allAppliedFilters {
@@ -591,6 +828,33 @@ input[type='button'] {
   padding: 0 0.3vw;
 }
 
+@media only screen and (max-width: 850px) and (min-width: 600px) {
+  
+  #allAppliedFilters button {
+    padding: 0.5vw;
+    height: 4vw;
+    font-size: 0.5rem;
+  }
+  
+  #allAppliedFilters button img {
+    padding: 0 0.2vw;
+    width: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 1150px) and (min-width: 850px) {
+  
+  #allAppliedFilters button {
+    padding: 0.6vw;
+    height: 3vw;
+    font-size: 0.6rem;
+  }
+  
+  #allAppliedFilters button img {
+    padding: 0 0.2vw;
+    width: 1.3vw;
+  }
+}
 
 /*Footer Section*/
 footer {
@@ -631,4 +895,9 @@ a, a:active, a:checked {
 
 .home__nav a:hover {
   color: #F0005E;
+}
+@media only screen and (max-width: 850px) and (min-width: 600px) {
+  .home__social img {
+    width: 4.5vw;
+  }
 }

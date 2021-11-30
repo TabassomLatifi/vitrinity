@@ -2383,8 +2383,10 @@ function searchFunction() {
     }
 
 //sorting section
-  
+
+
 function sortListAscending() {
+
     String.prototype.toEnDigit = function() {
         return this.replace(/[\u06F0-\u06F9]+/g, function(digit) {
             var ret = '';
@@ -2416,7 +2418,86 @@ function sortListAscending() {
     }
   };
 
+  function sortListAscending2() {
+    const checkMark1 = document.getElementById('check1');
+    const checkMark2 = document.getElementById('check2');
+    const sortingCondition1 = document.getElementById('sortingCondition1'); 
+    const sortingCondition2 = document.getElementById('sortingCondition2');
+    checkMark2.style.display = 'block';
+    checkMark1.style.display = 'none';
+    sortingCondition2.style.color ='#44D57A';
+    sortingCondition1.style.color ='#22223A';
+    String.prototype.toEnDigit = function() {
+        return this.replace(/[\u06F0-\u06F9]+/g, function(digit) {
+            var ret = '';
+            for (var i = 0, len = digit.length; i < len; i++) {
+                ret += String.fromCharCode(digit.charCodeAt(i) - 1728);
+            }
+
+            return ret*1000;
+        });
+    }; 
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("productList");
+    switching = true;
+    while (switching) {
+      switching = false;
+      b = list.getElementsByClassName("item");
+      console.log(b);
+      for (i = 0; i < (b.length - 1); i++) {
+        shouldSwitch = false;        
+        if (Number(b[i].getElementsByTagName('div')[0].getElementsByTagName('span')[1].innerHTML.toEnDigit()) > Number(b[i + 1].getElementsByTagName('div')[0].getElementsByTagName('span')[1].innerHTML.toEnDigit())) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+      }
+    }
+  };
   function sortListDescending() {
+    String.prototype.toEnDigit = function() {
+        return this.replace(/[\u06F0-\u06F9]+/g, function(digit) {
+            var ret = '';
+            for (var i = 0, len = digit.length; i < len; i++) {
+                ret += String.fromCharCode(digit.charCodeAt(i) - 1728);
+            }
+
+            return ret*1000;
+        });
+    }; 
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("productList");
+    switching = true;
+    while (switching) {
+      switching = false;
+      b = list.getElementsByClassName("item");
+      console.log(b);
+      for (i = 0; i < (b.length - 1); i++) {
+        shouldSwitch = false;        
+        if (Number(b[i].getElementsByTagName('div')[0].getElementsByTagName('span')[1].innerHTML.toEnDigit()) < Number(b[i + 1].getElementsByTagName('div')[0].getElementsByTagName('span')[1].innerHTML.toEnDigit())) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      if (shouldSwitch) {
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+      }
+    }
+  }
+
+  function sortListDescending2() {
+    const checkMark1 = document.getElementById('check1');
+    const checkMark2 = document.getElementById('check2');
+    const sortingCondition1 = document.getElementById('sortingCondition1'); 
+    const sortingCondition2 = document.getElementById('sortingCondition2');
+    checkMark1.style.display = 'block';
+    checkMark2.style.display = 'none';
+    sortingCondition1.style.color ='#44D57A';
+    sortingCondition2.style.color ='#22223A';
     String.prototype.toEnDigit = function() {
         return this.replace(/[\u06F0-\u06F9]+/g, function(digit) {
             var ret = '';
@@ -2463,7 +2544,20 @@ function sortListAscending() {
 
   }
     
+  function showFiltersList() {
+    const popupFilters = document.getElementById('popupFilters');
+    if (popupFilters.style.display = 'none') {
+        popupFilters.style.display = 'grid';
+    } else {
+        popupFilters.style.display = 'none';
+    }
+  }
     
+  function hideFiltersList() {
+    const popupFilters = document.getElementById('popupFilters');
+    popupFilters.style.display = 'none';
+
+  }
 
 
 
