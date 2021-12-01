@@ -187,6 +187,7 @@ html {
     position: relative;
     cursor: pointer;
 }
+@media (hover: hover) {
 .item:hover .pricebox {
   width: 80%;
 }
@@ -196,6 +197,7 @@ html {
 }
 .item:hover .productName {
   display: block;
+}
 }
 
 @media only screen and (max-width: 1150px) and (min-width: 600px) {
@@ -249,9 +251,11 @@ html {
   border-bottom: none;
   color: #D3D0CB;
 }
+@media (hover: hover) {
 .sorting .active:hover {
   color: #F0005E;
   cursor: pointer;
+}
 }
 
 @media only screen and (max-width: 800px) and (min-width: 600px) {
@@ -686,7 +690,7 @@ input[type='button'] {
     height: 20%;
     border-radius: 4px 0px 0px 4px;
 }
-
+@media (hover: hover) {
 .pricebox:hover {
     width: 80%;
 }
@@ -696,6 +700,7 @@ input[type='button'] {
 }
 .pricebox:hover .productName {
   display: block;
+}
 }
 .productName {
   display: none;
@@ -727,7 +732,7 @@ input[type='button'] {
     height: 20%;
     border-radius: 0px 4px 4px 0px;
 }
-
+@media (hover: hover) {
 .unavailable:hover {
   width: 50%;
 }
@@ -744,6 +749,7 @@ input[type='button'] {
 .unavailable:hover span {
   display: block;
   font-size: 0.9rem;
+}
 }
 .unavailable img {
     width: 50%;
@@ -796,8 +802,10 @@ input[type='button'] {
 .currency {
   font-size: 0.5rem;
 }
+@media (hover: hover) {
 .unavailable:hover span {
   font-size: 0.6rem;
+}
 }
 .unavailable span {
   bottom: 4.5vw;
@@ -805,6 +813,9 @@ input[type='button'] {
 }
 /*applied filters*/
 
+#mobileAppliedFilters {
+  display: none;
+}
 #allAppliedFilters {
   display: flex;
   flex-wrap: wrap;
@@ -864,6 +875,8 @@ footer {
   margin: 0;
   padding: 0;
   width: 100vw;
+  position: fixed;
+  bottom: 0;
 }
 .home__social {
   float: left;
@@ -874,8 +887,10 @@ footer {
   cursor: pointer;
   width: 3vw;
 }
+@media (hover: hover) {
 .home__social img:hover {
   filter: invert(16%) sepia(85%) saturate(5629%) hue-rotate(328deg) brightness(90%) contrast(109%);
+}
 }
 .home__nav {
   float: right;
@@ -892,9 +907,10 @@ a, a:active, a:checked {
   text-decoration: none;
   color: #22223A;
 }
-
+@media (hover: hover) {
 .home__nav a:hover {
   color: #F0005E;
+}
 }
 @media only screen and (max-width: 850px) and (min-width: 600px) {
   .home__social img {

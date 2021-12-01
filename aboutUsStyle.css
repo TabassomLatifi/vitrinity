@@ -25,6 +25,9 @@ html {
     font-size: 16px;
 
 }
+h2 {
+    text-align: center;
+}
 /*header section*/
 
 .home__header {
@@ -52,6 +55,40 @@ html {
     margin: 1vw 15.15625vw 1vw 1vw;
     text-align: right;
 }
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+
+    .logotype {
+        font-size: 1.5rem;
+        margin: 1vw 1vw 1vw 1vw;
+    }
+    .logo {
+        width: 3%;
+    }
+}  
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+
+    .logotype {
+        font-size: 1.25rem;
+        margin: 1vw 1vw 1vw 1vw;
+
+    }
+    .logo {
+        width: 5%;
+    }
+}  
+@media only screen and (max-width: 400px) {
+    .logotype {
+        font-size: 1.25rem;
+        padding: 2vw 0;
+        margin: 1vw 1vw 1vw 1vw;
+
+    }
+    .logo {
+        width: 5%;
+    }
+
+}   
+
 
 main {
     margin-bottom: 15vw;
@@ -61,7 +98,71 @@ main {
     text-align: right;
 }
 
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    grid-gap: 1vw;
+}
+span {
+    grid-column: 3;
+    font-size: 1.2rem;
+    margin-top: 1vw;
+}
+input {
+    grid-column: 1 / span 2;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,16%);
+    width: 50vw;
+    padding: 1vw 0;
+}
+button {
+    background-color: #F0005E;
+    color: #ffffff;
+    width: 15vw;
+    font-size: 1rem;
+    padding: 1vw;
+    border: none;
+    border-radius: 4px;
 
+
+}
+.long {
+    height: 15vw;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        grid-template-columns: repeat(3, 30vw);
+    
+    }
+    span {
+        grid-column: 3;
+        font-size: 0.7rem;
+        justify-self: center;
+    }
+    input {
+        grid-column: 1 / span 2;
+        border: none;
+        padding: 1vw 0;
+        width: 60vw;
+    }
+    
+    .long {
+        height: 40vw;
+    }
+    button {
+        
+        background-color: #F0005E;
+        color: #ffffff;
+        width: 25vw;
+        font-size: 0.8rem;
+        padding: 1vw;
+        border: none;
+        border-radius: 4px;
+    
+    }
+}
 
 /*Footer Section*/
 footer {
@@ -71,6 +172,8 @@ footer {
     margin: 0;
     padding: 0;
     width: 100vw;
+    position: fixed;
+    bottom: 0;
 }
 .home__social {
     float: left;
@@ -105,4 +208,25 @@ footer {
 
 .home__nav a:hover {
     color: #F0005E;
+}
+
+@media only screen and (max-width: 400px) {
+
+    .home__social img {
+        width: 5vw;
+    }
+    .home__nav {
+        font-size: 0.8rem;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) and (min-width: 400px) {
+
+    .home__social img {
+        width: 4vw;
+    }
+    .home__nav {
+        font-size: 1rem;
+    }
 }

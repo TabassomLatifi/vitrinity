@@ -249,7 +249,7 @@ html {
     bottom: 0;
     z-index: 3;
     width: 100%;
-    height: 80%;
+    height: 100%;
     background-color: #fff;
     padding: 0vw 10vw;
     overflow-y: scroll;
@@ -284,7 +284,28 @@ html {
 #popupFilters .text {
     padding-right: 5vw;
   }
+/*applied filters*/
 
+#mobileAppliedFilters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    justify-content: flex-end;
+}
+#mobileAppliedFilters button {
+    background-color: #F6EFF2;
+    border: 1px solid #F0005E;
+    border-radius: 10px;
+    color: #F0005E;
+    padding: 1vw;
+    height: 6vw;
+    margin: 1vw;
+    cursor: pointer;
+  }
+  #allAppliedFilters button img {
+    padding: 0 1vw;
+  }
 /*products section*/
 
 .products {
