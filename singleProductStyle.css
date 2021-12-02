@@ -93,6 +93,28 @@ html {
     font-size: 1rem;
     color: #4F4E60;
 }
+
+
+@media only screen and (max-width: 1242px) and (min-width: 600px) {
+    .products__header img {
+      width: 2rem;
+    }
+    .products__header input[type=text] {
+      width: 22vw;
+      height: 2.5rem;
+    }
+    .products__header .search__container button {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-size: 1.5rem 1.5rem;
+      background-position: 0.5rem 0.5rem;
+    }
+    ::placeholder {
+      font-size: 0.7rem;
+    }
+  }
+
+ 
 /*main section*/
 main {
     display: grid;
@@ -209,6 +231,10 @@ main {
     padding-top: 1vw;
 }
 /*product specification section*/
+
+.mobileTitle {
+    display: none;
+}
 
 .productspecifications .divtitle {
     font-size: 1.25rem;
@@ -332,6 +358,8 @@ footer {
     margin: 0;
     padding: 0;
     width: 100vw;
+    position: fixed;
+    bottom: 0;
   }
   .home__social {
     float: left;
