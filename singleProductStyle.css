@@ -151,6 +151,8 @@ main {
     box-shadow: 0px 3px 6px rgba(0,0,0,16%);
 
 }
+
+
 /*slider*/
 .slider {
     position: relative;
@@ -179,6 +181,11 @@ main {
 }
 .mySlides {
     display: none;
+}
+@media only screen and (max-width: 1242px) and (min-width: 700px) {
+    .slider {
+        top: -4vw;
+    }
 }
 /*purchase button*/
 
@@ -229,6 +236,31 @@ main {
     font-size: 0.9rem;
     float: left;
     padding-top: 1vw;
+}
+@media only screen and (max-width: 1242px) and (min-width: 700px) {
+    .productbutton {
+        margin-top: -3vw;
+        font-size: 1.2rem;
+    }
+    .producttitle h1 {
+        font-size: 1rem;
+    }
+    .producttitle aside {
+        font-size: 0.7rem;
+        
+    }
+    .producttitle button {
+        height: 5vw;
+        font-size: 1.2rem;
+        padding: 0 0.4vw;
+        text-align: center;
+    }
+    .producttitle button span {
+        font-size: 0.5rem;
+        padding-top: 1vw;
+        margin-left: 0.5vw;
+        text-align: center;
+    }
 }
 /*product specification section*/
 
@@ -283,6 +315,128 @@ main {
     margin-top: 0.65vw;
 
 }
+@media only screen and (max-width: 1500px) and (min-width: 1300px) {
+    .productspecifications .divtitle {
+        font-size: 0.9rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productspecifications .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -1.8vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+
+  
+} 
+@media only screen and (max-width: 1300px) and (min-width: 1110px) {
+    .productspecifications .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productspecifications .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+
+  
+} 
+@media only screen and (max-width: 1110px) and (min-width: 1000px) {
+    .productspecifications .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productspecifications .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.25vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+} 
+@media only screen and (max-width: 1000px) and (min-width: 900px) {
+    .productspecifications .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productspecifications .underline {
+        border: 7px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.6vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+    .productspecifications ul {
+        font-size: 0.8rem;
+    }
+    .productspecifications li {
+        font-size: 0.8rem;
+        width: 15vw;
+    
+    }
+} 
+@media only screen and (max-width: 900px) and (min-width: 800px) {
+    .productspecifications .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productspecifications .underline {
+        border: 7px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.8vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+    .productspecifications ul {
+        font-size: 0.8rem;
+    }
+    .productspecifications li {
+        font-size: 0.8rem;
+        width: 15vw;
+    
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 700px) {
+    .productspecifications .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 6vw;
+        margin-top: 3vw;
+    }
+    .productspecifications .underline {
+        border: 7px solid #F0005E;
+        border-radius: 6px;
+        margin-bottom: -3.25vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        padding-right: 0.5vw;
+        padding-left: 0.5vw;
+        z-index: -2;
+    }
+    .productspecifications ul {
+        font-size: 0.8rem;
+    }
+    .productspecifications li {
+        font-size: 0.8rem;
+        width: 15vw;
+    
+    }
+}
+
 /*product introduction section*/
 
 .productintroduction .divtitle {
@@ -315,7 +469,114 @@ main {
     box-shadow: 0px 3px 6px rgba(0,0,0,16%);
 
 }
+@media only screen and (max-width: 1500px) and (min-width: 1300px) {
+    .productintroduction .divtitle {
+        font-size: 0.9rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productintroduction .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -1.8vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
 
+  
+} 
+@media only screen and (max-width: 1300px) and (min-width: 1110px) {
+    .productintroduction .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productintroduction .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+
+  
+} 
+@media only screen and (max-width: 1110px) and (min-width: 1000px) {
+    .productintroduction .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productintroduction .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.25vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+} 
+@media only screen and (max-width: 1000px) and (min-width: 900px) {
+    .productintroduction .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productintroduction .underline {
+        border: 7px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.6vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+    .productintroduction p {
+        font-size: 0.8rem;
+    }
+
+} 
+@media only screen and (max-width: 900px) and (min-width: 800px) {
+    .productintroduction .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .productintroduction .underline {
+        border: 7px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.8vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+    .productintroduction p {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 700px) {
+    .productintroduction .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 6vw;
+        margin-top: 3vw;
+    }
+    .productintroduction .underline {
+        border: 7px solid #F0005E;
+        border-radius: 6px;
+        margin-bottom: -3.25vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        padding-right: 0.5vw;
+        padding-left: 0.5vw;
+        z-index: -2;
+    }
+    .productintroduction p {
+        font-size: 0.8rem;
+    }
+
+}
 /*delivery section*/
 
 .delivery .divtitle {
@@ -350,6 +611,114 @@ main {
     margin-bottom: 2vw;
 }
 
+@media only screen and (max-width: 1500px) and (min-width: 1300px) {
+    .delivery .divtitle {
+        font-size: 0.9rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .delivery .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -1.8vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+
+  
+} 
+@media only screen and (max-width: 1300px) and (min-width: 1110px) {
+    .delivery .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .delivery .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+
+  
+} 
+@media only screen and (max-width: 1110px) and (min-width: 1000px) {
+    .delivery .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .delivery .underline {
+        border: 6px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.25vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+} 
+@media only screen and (max-width: 1000px) and (min-width: 900px) {
+    .delivery .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .delivery .underline {
+        border: 7px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.6vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+    .delivery ul {
+        font-size: 0.8rem;
+    }
+
+} 
+@media only screen and (max-width: 900px) and (min-width: 800px) {
+    .delivery .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        margin-top: 3vw;
+    }
+    .delivery .underline {
+        border: 7px solid #F0005E;
+        border-radius: 8px;
+        margin-bottom: -2.8vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+    }
+    .delivery ul {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 700px) {
+    .delivery .divtitle {
+        font-size: 0.8rem;
+        margin-right: 4vw;
+        margin-left: 6vw;
+        margin-top: 3vw;
+    }
+    .delivery .underline {
+        border: 7px solid #F0005E;
+        border-radius: 6px;
+        margin-bottom: -3.25vw;
+        margin-right: 4vw;
+        margin-left: 8vw;
+        padding-right: 0.5vw;
+        padding-left: 0.5vw;
+        z-index: -2;
+    }
+    .delivery ul {
+        font-size: 0.8rem;
+    }
+
+}
 /*Footer Section*/
 footer {
     background-color: #ffffff;
