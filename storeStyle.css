@@ -92,6 +92,59 @@ html {
     font-size: 1rem;
     color: #4F4E60;
 }
+
+@media only screen and (max-width: 600px) {
+    
+
+.products__header img {
+    margin: 4.1vw 4.1vw 4.1vw 4.1vw;
+    width: 8%;
+
+}
+.products__header a {
+    font-size: 20px;
+    padding: 4.1vw 0;
+}
+
+
+.products__header input[type=text] {
+    margin: 4.1vw 0;
+    width: 35vw;
+    height: 8vw;
+}
+
+.products__header .search__container button {
+    margin-top: 4.1vw;
+    margin-left: 4.1vw;
+    width: 8vw;
+    height: 8vw;
+    background-position: 1.7vw 1.7vw;
+    background-size: 4vw 4vw;
+}
+
+::placeholder {
+    font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 1242px) and (min-width: 600px) {
+    .products__header img {
+      width: 2rem;
+    }
+    .products__header input[type=text] {
+      width: 22vw;
+      height: 2.5rem;
+    }
+    .products__header .search__container button {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-size: 1.5rem 1.5rem;
+      background-position: 0.5rem 0.5rem;
+    }
+    ::placeholder {
+      font-size: 0.7rem;
+    }
+  }
 /*store information section*/
 
 .store__title {
@@ -154,6 +207,116 @@ html {
 
 
 }
+@media only screen and (max-width: 1255px) and (min-width: 950px) {
+    .store__title a {
+        font-size: 1.2rem;
+        width: 24vw;
+    }
+}
+@media only screen and (max-width: 950px) and (min-width: 600px) {
+      
+  .store__title h1 {
+    margin-top: 4vw;
+    font-size: 1.3rem;
+    padding-right: 2vw;
+
+
+}
+.store__title h2 {
+    margin-top: 9vw;
+    font-size: 0.8rem;
+    padding-right: 2vw;
+}
+.store__title a {
+    font-size: 0.9rem;
+    width: 28vw;
+    left: 42vw;
+
+    }
+}
+@media only screen and (max-width: 600px) and (min-width: 360px) {
+    
+.store__title {
+    display: grid;
+    grid-template-columns: repeat (4, 20vw);
+    grid-gap: 1vw;
+  }
+  .store__logo {
+      height: 15vw;
+      width: 15vw;
+      outline: 0.2rem double #F0005E;
+      margin-top: 7vw;
+      margin-right: 7vw;
+  }
+  
+  .store__title h1 {
+      margin-top: 8vw;
+      font-size: 1rem;
+      padding-right: 3vw;
+
+  
+  }
+  .store__title h2 {
+      margin-top: 14vw;
+      font-size: 0.6rem;
+      padding-right: 3vw;
+  }
+
+  .store__title a {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-top: 3vw;
+    z-index: 3;
+    width: 100%;
+    height: 12vw;
+    border-radius: 0;
+    font-size: 1rem;
+
+}
+}
+@media only screen and (max-width: 360px) {
+    .store__title {
+        display: grid;
+        grid-template-columns: repeat (4, 20vw);
+        grid-gap: 1vw;
+        
+        
+      }
+      .store__logo {
+          height: 15vw;
+          width: 15vw;
+          outline: 0.2rem double #F0005E;
+          margin-top: 7vw;
+          margin-right: 7vw;
+      }
+      
+      .store__title h1 {
+          margin-top: 8vw;
+          font-size: 0.8rem;
+          padding-right: 3vw;
+    
+      
+      }
+      .store__title h2 {
+          margin-top: 14vw;
+          font-size: 0.6rem;
+          padding-right: 3vw;
+      }
+    
+      .store__title a {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding-top: 3vw;
+        z-index: 3;
+        width: 100%;
+        height: 12vw;
+        border-radius: 0;
+        font-size: 1rem;
+    
+    }
+}
 .follower {
     grid-column: 1;
     grid-row: 1;
@@ -203,13 +366,183 @@ html {
     float: right;
     padding-left: 0.5vw;
 }
-  
+@media only screen and (max-width: 1350px) and (min-width: 1000px) {
+    .follower {
+        margin-top: 5vw;
+        font-size: 1.1rem;    
+    }
+    .follower img {
+        position: absolute;
+        top: 11vw;
+        left: 28vw;
+    }
+    
+    
+    .numberOfProducts {
+        margin-top: 12vw;
+        font-size: 1.1rem;
+    }
+    .numberOfProducts img {
+        position: absolute;
+        top: 18vw;
+        left: 28vw;
+    
+    }
+    .store_icon {
+        width: 4.8vw;
+    
+    }
+      
+}
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+    .follower {
+        margin-top: 5vw;
+        font-size: 1rem;    
+    }
+    .follower img {
+        position: absolute;
+        top: 13vw;
+        left: 30vw;
+    }
+    
+    
+    .numberOfProducts {
+        margin-top: 12vw;
+        font-size: 1rem;
+    }
+    .numberOfProducts img {
+        position: absolute;
+        top: 20vw;
+        left: 30vw;
+    
+    }
+    .store_icon {
+        width: 4.8vw;
+    
+    }
+      
+}
+@media only screen and (max-width: 800px) and (min-width: 600px) {
+    .follower {
+        margin-top: 5vw;
+        font-size: 1rem;    
+    }
+    .follower img {
+        position: absolute;
+        top: 15vw;
+        left: 32vw;
+    }
+    
+    
+    .numberOfProducts {
+        margin-top: 12vw;
+        font-size: 1rem;
+    }
+    .numberOfProducts img {
+        position: absolute;
+        top: 22vw;
+        left: 32vw;
+    
+    }
+    .store_icon {
+        width: 5vw;
+    
+    }
+      
+}
+
+@media only screen and (max-width: 600px) and (min-width: 360px) {
+    .follower {
+        margin-top: 7vw;
+        font-size: 0.8rem;
+        padding-top: 2vw;
+        margin-left: 4vw;
+        
+    
+    
+    }
+    .follower img {
+        position: absolute;
+        top: 24vw;
+        left: 34vw;
+    }
+    
+    
+    .numberOfProducts {
+        margin-top: 13vw;
+        font-size: 0.8rem;
+        padding-top: 2vw;
+       
+    }
+    .numberOfProducts img {
+        position: absolute;
+        top: 30vw;
+        left: 34vw;
+    
+    }
+    .store_icon {
+        width: 6vw;
+        padding: 0.5vw 0.5vw;
+    
+    }
+    .number {
+        float: right;
+        padding-left: 0.5vw;
+    }
+
+}
+@media only screen and (max-width: 360px) {
+    .follower {
+        margin-top: 8vw;
+        font-size: 0.6rem;
+        padding-top: 2vw;
+        margin-left: 4vw;
+        
+    
+    
+    }
+    .follower img {
+        position: absolute;
+        top: 26.5vw;
+        left: 33vw;
+    }
+    
+    
+    .numberOfProducts {
+        margin-top: 14vw;
+        font-size: 0.6rem;
+        padding-top: 2vw;
+       
+    }
+    .numberOfProducts img {
+        position: absolute;
+        top: 32.5vw;
+        left: 33vw;
+    
+    }
+    .store_icon {
+        width: 6vw;
+        padding: 0.5vw 0.5vw;
+    
+    }
+    .number {
+        float: right;
+        padding-left: 0.5vw;
+    }
+}
 
 /*introduction section*/
 
 .introduction {
     margin: 5.2vw 16.45vw;
     text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    .introduction {
+        margin: 5.2vw 10vw;
+        font-size: 0.8rem;
+    }
 }
 /*products section*/
 
@@ -239,6 +572,17 @@ html {
     border-radius: 4px;
 }
 
+@media only screen and (max-width: 600px) {
+    .products {
+        grid: auto-flow 32.33vw / repeat(3, 32.33vw);
+        grid-gap: 1vw;
+        margin: 4vw 1vw;
+    }
+    .products img {
+        width: 32.33vw;
+        height: 32.33vw;
+    }
+}
 /*price box*/
 .pricebox {
     position: absolute;
@@ -277,7 +621,53 @@ html {
     height: 50%;
     margin-top: 29%;
 }
+@media only screen and (max-width: 1300px) and (min-width: 900px) {
+    .price {
+        font-size: 1.8rem;
+    }
+    .currency {
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+    .pricebox {
+        width: 65%;
+ 
+    }
+    .price {
+        font-size: 1.3rem;
+    }
+    .currency {
+        font-size: 0.5rem;
+        position: absolute;
+        top: 1vw;
+    }
+    .unavailable img {
+        position: absolute;
+        left: 1vw;
+    }
+}
 
+@media only screen and (max-width: 600px) {
+    .pricebox {
+        width: 70%;
+    }
+    
+    .price {
+        font-size: 1rem;
+        margin-right: 1vw;
+    }
+    .currency {
+        font-size: 0.45rem;
+        position: absolute;
+        top: 2vw;
+    }
+    .unavailable img {
+        position: absolute;
+        left: 1vw;
+    }
+    
+}
 
 /*Footer Section*/
 footer {
