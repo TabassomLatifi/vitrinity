@@ -43,7 +43,7 @@ html {
 .products__header img {
     float: right;
     margin: 1.5vw 15.15625vw 1vw 1vw;
-    width: 2%;
+    width: 5%;
 
 }
 .products__header a {
@@ -97,7 +97,7 @@ html {
 }
 @media only screen and (max-width: 1242px) and (min-width: 600px) {
   .products__header img {
-    width: 2rem;
+    width: 7%;
   }
   .products__header input[type=text] {
     width: 22vw;

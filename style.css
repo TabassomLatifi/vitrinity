@@ -43,7 +43,7 @@ html {
     padding: 1vw 0;
 }
 .logo {
-    width: 2%;
+    width: 5%;
     margin: 1vw 15.15625vw 1vw 1vw;
     text-align: right;
 }
@@ -54,7 +54,7 @@ html {
         margin: 1vw 1vw 1vw 1vw;
     }
     .logo {
-        width: 3%;
+        width: 7%;
     }
 }  
 @media only screen and (max-width: 600px) and (min-width: 400px) {
@@ -65,7 +65,7 @@ html {
 
     }
     .logo {
-        width: 5%;
+        width: 10%;
     }
 }  
 @media only screen and (max-width: 400px) {
@@ -76,7 +76,7 @@ html {
 
     }
     .logo {
-        width: 5%;
+        width: 10%;
     }
 
 }  
